@@ -1,0 +1,891 @@
+{
+  "audio": "voiceover.wav",
+  "audio_sha256": "bd7344deddb54c160d5da09cc0ec53541620c70d92f3e8a4e87ece049cb2db01",
+  "script": "script.md",
+  "duration": 60.2,
+  "aligner": "ctc_forced_aligner@1.0.2-onnx+uroman",
+  "phrases": [
+    {
+      "id": "p01",
+      "start": 0.0,
+      "end": 2.17,
+      "windows": [
+        "P01"
+      ],
+      "text": "تفتح متجر أونلاين ساهل…",
+      "words": [
+        {
+          "id": "p01.w01",
+          "text": "تفتح",
+          "start": 0.3,
+          "end": 0.6,
+          "confidence": 0.986
+        },
+        {
+          "id": "p01.w02",
+          "text": "متجر",
+          "start": 0.68,
+          "end": 0.94,
+          "confidence": 0.906
+        },
+        {
+          "id": "p01.w03",
+          "text": "أونلاين",
+          "start": 1.04,
+          "end": 1.48,
+          "confidence": 0.8888
+        },
+        {
+          "id": "p01.w04",
+          "text": "ساهل…",
+          "start": 1.78,
+          "end": 2.14,
+          "confidence": 0.9919
+        }
+      ]
+    },
+    {
+      "id": "p02",
+      "start": 2.838,
+      "end": 6.293,
+      "windows": [
+        "P02",
+        "P03"
+      ],
+      "text": "بصح تبني متجر يبيع… ويرجّعلك الـclient؟",
+      "words": [
+        {
+          "id": "p02.w01",
+          "text": "بصح",
+          "start": 2.82,
+          "end": 3.06,
+          "confidence": 0.9595
+        },
+        {
+          "id": "p02.w02",
+          "text": "تبني",
+          "start": 3.18,
+          "end": 3.44,
+          "confidence": 0.9616
+        },
+        {
+          "id": "p02.w03",
+          "text": "متجر",
+          "start": 3.58,
+          "end": 3.94,
+          "confidence": 0.9725
+        },
+        {
+          "id": "p02.w04",
+          "text": "يبيع…",
+          "start": 4.02,
+          "end": 4.5,
+          "confidence": 0.9833
+        },
+        {
+          "id": "p02.w05",
+          "text": "ويرجّعلك",
+          "start": 5.1,
+          "end": 5.78,
+          "confidence": 0.9905
+        },
+        {
+          "id": "p02.w06",
+          "text": "الـclient؟",
+          "start": 5.86,
+          "end": 7.02,
+          "confidence": 0.5763
+        }
+      ]
+    },
+    {
+      "id": "p03",
+      "start": 7.05,
+      "end": 7.798,
+      "windows": [
+        "P04"
+      ],
+      "text": "هنا الفرق.",
+      "words": [
+        {
+          "id": "p03.w01",
+          "text": "هنا",
+          "start": 7.12,
+          "end": 7.3,
+          "confidence": 0.9807
+        },
+        {
+          "id": "p03.w02",
+          "text": "الفرق.",
+          "start": 7.4,
+          "end": 7.74,
+          "confidence": 0.9924
+        }
+      ]
+    },
+    {
+      "id": "p04",
+      "start": 8.776,
+      "end": 10.521,
+      "windows": [
+        "P05"
+      ],
+      "text": "هذا هو Sooq Pro.",
+      "words": [
+        {
+          "id": "p04.w01",
+          "text": "هذا",
+          "start": 8.84,
+          "end": 9.12,
+          "confidence": 0.9939
+        },
+        {
+          "id": "p04.w02",
+          "text": "هو",
+          "start": 9.22,
+          "end": 9.34,
+          "confidence": 0.9327
+        },
+        {
+          "id": "p04.w03",
+          "text": "Sooq",
+          "start": 9.98,
+          "end": 10.24,
+          "confidence": 0.2148
+        },
+        {
+          "id": "p04.w04",
+          "text": "Pro.",
+          "start": 10.34,
+          "end": 10.52,
+          "confidence": 0.8259
+        }
+      ]
+    },
+    {
+      "id": "p05",
+      "start": 11.502,
+      "end": 19.604,
+      "windows": [
+        "P06",
+        "P07",
+        "P08"
+      ],
+      "text": "قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.",
+      "words": [
+        {
+          "id": "p05.w01",
+          "text": "قالب",
+          "start": 11.48,
+          "end": 11.82,
+          "confidence": 0.9902
+        },
+        {
+          "id": "p05.w02",
+          "text": "WooCommerce",
+          "start": 11.88,
+          "end": 12.48,
+          "confidence": 0.1179
+        },
+        {
+          "id": "p05.w03",
+          "text": "عربي",
+          "start": 12.56,
+          "end": 12.88,
+          "confidence": 0.9703
+        },
+        {
+          "id": "p05.w04",
+          "text": "من",
+          "start": 13.24,
+          "end": 13.3,
+          "confidence": 0.9882
+        },
+        {
+          "id": "p05.w05",
+          "text": "الأصل،",
+          "start": 13.34,
+          "end": 13.66,
+          "confidence": 0.9922
+        },
+        {
+          "id": "p05.w06",
+          "text": "مصمّم",
+          "start": 14.38,
+          "end": 14.74,
+          "confidence": 0.9875
+        },
+        {
+          "id": "p05.w07",
+          "text": "لرحلة",
+          "start": 14.92,
+          "end": 15.22,
+          "confidence": 0.946
+        },
+        {
+          "id": "p05.w08",
+          "text": "البيع",
+          "start": 15.34,
+          "end": 15.66,
+          "confidence": 0.9741
+        },
+        {
+          "id": "p05.w09",
+          "text": "كاملة…",
+          "start": 15.92,
+          "end": 16.32,
+          "confidence": 0.9944
+        },
+        {
+          "id": "p05.w10",
+          "text": "من",
+          "start": 16.88,
+          "end": 16.98,
+          "confidence": 0.9969
+        },
+        {
+          "id": "p05.w11",
+          "text": "أول",
+          "start": 17.12,
+          "end": 17.34,
+          "confidence": 0.9788
+        },
+        {
+          "id": "p05.w12",
+          "text": "زيارة،",
+          "start": 17.4,
+          "end": 17.74,
+          "confidence": 0.9944
+        },
+        {
+          "id": "p05.w13",
+          "text": "حتى",
+          "start": 18.22,
+          "end": 18.6,
+          "confidence": 0.9831
+        },
+        {
+          "id": "p05.w14",
+          "text": "يرجعلك",
+          "start": 18.7,
+          "end": 19.18,
+          "confidence": 0.9952
+        },
+        {
+          "id": "p05.w15",
+          "text": "الـclient.",
+          "start": 19.26,
+          "end": 19.68,
+          "confidence": 0.1906
+        }
+      ]
+    },
+    {
+      "id": "p06",
+      "start": 20.551,
+      "end": 21.472,
+      "windows": [
+        "P09"
+      ],
+      "text": "يحب يشري بسرعة؟",
+      "words": [
+        {
+          "id": "p06.w01",
+          "text": "يحب",
+          "start": 20.56,
+          "end": 20.8,
+          "confidence": 0.9575
+        },
+        {
+          "id": "p06.w02",
+          "text": "يشري",
+          "start": 20.84,
+          "end": 21.08,
+          "confidence": 0.965
+        },
+        {
+          "id": "p06.w03",
+          "text": "بسرعة؟",
+          "start": 21.14,
+          "end": 21.42,
+          "confidence": 0.993
+        }
+      ]
+    },
+    {
+      "id": "p07",
+      "start": 22.137,
+      "end": 24.332,
+      "windows": [
+        "P10"
+      ],
+      "text": "يكوماندي مباشرة من صفحة المنتج.",
+      "words": [
+        {
+          "id": "p07.w01",
+          "text": "يكوماندي",
+          "start": 22.14,
+          "end": 22.6,
+          "confidence": 0.6518
+        },
+        {
+          "id": "p07.w02",
+          "text": "مباشرة",
+          "start": 22.66,
+          "end": 23.22,
+          "confidence": 0.9812
+        },
+        {
+          "id": "p07.w03",
+          "text": "من",
+          "start": 23.44,
+          "end": 23.52,
+          "confidence": 0.9869
+        },
+        {
+          "id": "p07.w04",
+          "text": "صفحة",
+          "start": 23.58,
+          "end": 23.78,
+          "confidence": 0.9948
+        },
+        {
+          "id": "p07.w05",
+          "text": "المنتج.",
+          "start": 23.9,
+          "end": 24.26,
+          "confidence": 0.9897
+        }
+      ]
+    },
+    {
+      "id": "p08",
+      "start": 25.136,
+      "end": 28.318,
+      "windows": [
+        "P11",
+        "P12",
+        "P13"
+      ],
+      "text": "الاسم… النيميرو… الولاية والمدينة…",
+      "words": [
+        {
+          "id": "p08.w01",
+          "text": "الاسم…",
+          "start": 25.14,
+          "end": 25.48,
+          "confidence": 0.9899
+        },
+        {
+          "id": "p08.w02",
+          "text": "النيميرو…",
+          "start": 26.12,
+          "end": 26.56,
+          "confidence": 0.7056
+        },
+        {
+          "id": "p08.w03",
+          "text": "الولاية",
+          "start": 27.26,
+          "end": 27.68,
+          "confidence": 0.7843
+        },
+        {
+          "id": "p08.w04",
+          "text": "والمدينة…",
+          "start": 27.74,
+          "end": 28.28,
+          "confidence": 0.4173
+        }
+      ]
+    },
+    {
+      "id": "p09",
+      "start": 29.187,
+      "end": 31.335,
+      "windows": [
+        "P14"
+      ],
+      "text": "وسعر التوصيل يتحسبلو في الحين.",
+      "words": [
+        {
+          "id": "p09.w01",
+          "text": "وسعر",
+          "start": 29.18,
+          "end": 29.52,
+          "confidence": 0.9742
+        },
+        {
+          "id": "p09.w02",
+          "text": "التوصيل",
+          "start": 29.58,
+          "end": 30.02,
+          "confidence": 0.9233
+        },
+        {
+          "id": "p09.w03",
+          "text": "يتحسبلو",
+          "start": 30.14,
+          "end": 30.8,
+          "confidence": 0.9784
+        },
+        {
+          "id": "p09.w04",
+          "text": "في",
+          "start": 30.96,
+          "end": 31.02,
+          "confidence": 0.9805
+        },
+        {
+          "id": "p09.w05",
+          "text": "الحين.",
+          "start": 31.06,
+          "end": 31.36,
+          "confidence": 0.981
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "start": 32.311,
+      "end": 34.785,
+      "windows": [
+        "P15",
+        "P16"
+      ],
+      "text": "يختار اللون والمقاس، يكونفيرمي…",
+      "words": [
+        {
+          "id": "p10.w01",
+          "text": "يختار",
+          "start": 32.32,
+          "end": 32.66,
+          "confidence": 0.9097
+        },
+        {
+          "id": "p10.w02",
+          "text": "اللون",
+          "start": 32.74,
+          "end": 32.96,
+          "confidence": 0.6072
+        },
+        {
+          "id": "p10.w03",
+          "text": "والمقاس،",
+          "start": 33.0,
+          "end": 33.52,
+          "confidence": 0.9725
+        },
+        {
+          "id": "p10.w04",
+          "text": "يكونفيرمي…",
+          "start": 34.16,
+          "end": 34.72,
+          "confidence": 0.9203
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "start": 35.536,
+      "end": 36.005,
+      "windows": [
+        "P17"
+      ],
+      "text": "وخلاص.",
+      "words": [
+        {
+          "id": "p11.w01",
+          "text": "وخلاص.",
+          "start": 35.56,
+          "end": 35.92,
+          "confidence": 0.8111
+        }
+      ]
+    },
+    {
+      "id": "p12",
+      "start": 37.068,
+      "end": 38.891,
+      "windows": [
+        "P18"
+      ],
+      "text": "بصح البيع ما يوقفش هنا.",
+      "words": [
+        {
+          "id": "p12.w01",
+          "text": "بصح",
+          "start": 37.08,
+          "end": 37.34,
+          "confidence": 0.986
+        },
+        {
+          "id": "p12.w02",
+          "text": "البيع",
+          "start": 37.42,
+          "end": 37.74,
+          "confidence": 0.9849
+        },
+        {
+          "id": "p12.w03",
+          "text": "ما",
+          "start": 38.14,
+          "end": 38.18,
+          "confidence": 0.9834
+        },
+        {
+          "id": "p12.w04",
+          "text": "يوقفش",
+          "start": 38.26,
+          "end": 38.66,
+          "confidence": 0.9773
+        },
+        {
+          "id": "p12.w05",
+          "text": "هنا.",
+          "start": 38.72,
+          "end": 38.86,
+          "confidence": 0.5683
+        }
+      ]
+    },
+    {
+      "id": "p13",
+      "start": 39.886,
+      "end": 40.847,
+      "windows": [
+        "P19"
+      ],
+      "text": "نقاط الوفاء…",
+      "words": [
+        {
+          "id": "p13.w01",
+          "text": "نقاط",
+          "start": 39.9,
+          "end": 40.18,
+          "confidence": 0.9225
+        },
+        {
+          "id": "p13.w02",
+          "text": "الوفاء…",
+          "start": 40.26,
+          "end": 40.74,
+          "confidence": 0.9414
+        }
+      ]
+    },
+    {
+      "id": "p14",
+      "start": 41.412,
+      "end": 42.33,
+      "windows": [
+        "P20"
+      ],
+      "text": "عجلة الحظ…",
+      "words": [
+        {
+          "id": "p14.w01",
+          "text": "عجلة",
+          "start": 41.48,
+          "end": 41.78,
+          "confidence": 0.9854
+        },
+        {
+          "id": "p14.w02",
+          "text": "الحظ…",
+          "start": 41.92,
+          "end": 42.24,
+          "confidence": 0.9843
+        }
+      ]
+    },
+    {
+      "id": "p15",
+      "start": 43.114,
+      "end": 43.991,
+      "windows": [
+        "P21"
+      ],
+      "text": "الكوبونات…",
+      "words": [
+        {
+          "id": "p15.w01",
+          "text": "الكوبونات…",
+          "start": 43.12,
+          "end": 43.88,
+          "confidence": 0.9394
+        }
+      ]
+    },
+    {
+      "id": "p16",
+      "start": 44.571,
+      "end": 45.282,
+      "windows": [
+        "P22"
+      ],
+      "text": "واتساب…",
+      "words": [
+        {
+          "id": "p16.w01",
+          "text": "واتساب…",
+          "start": 44.6,
+          "end": 45.18,
+          "confidence": 0.8982
+        }
+      ]
+    },
+    {
+      "id": "p17",
+      "start": 45.875,
+      "end": 46.621,
+      "windows": [
+        "P23"
+      ],
+      "text": "المفضّلة…",
+      "words": [
+        {
+          "id": "p17.w01",
+          "text": "المفضّلة…",
+          "start": 45.88,
+          "end": 46.54,
+          "confidence": 0.9926
+        }
+      ]
+    },
+    {
+      "id": "p18",
+      "start": 47.461,
+      "end": 48.679,
+      "windows": [
+        "P24"
+      ],
+      "text": "كل ميزة تخدم جزء من رحلة الـclient.",
+      "words": [
+        {
+          "id": "p18.w01",
+          "text": "كل",
+          "start": 46.58,
+          "end": 47.24,
+          "confidence": 0.768
+        },
+        {
+          "id": "p18.w02",
+          "text": "ميزة",
+          "start": 47.3,
+          "end": 47.38,
+          "confidence": 0.0014
+        },
+        {
+          "id": "p18.w03",
+          "text": "تخدم",
+          "start": 47.42,
+          "end": 47.52,
+          "confidence": 0.0062
+        },
+        {
+          "id": "p18.w04",
+          "text": "جزء",
+          "start": 47.56,
+          "end": 47.72,
+          "confidence": 0.1074
+        },
+        {
+          "id": "p18.w05",
+          "text": "من",
+          "start": 47.98,
+          "end": 48.06,
+          "confidence": 0.2346
+        },
+        {
+          "id": "p18.w06",
+          "text": "رحلة",
+          "start": 48.3,
+          "end": 48.44,
+          "confidence": 0.0774
+        },
+        {
+          "id": "p18.w07",
+          "text": "الـclient.",
+          "start": 48.64,
+          "end": 49.4,
+          "confidence": 0.2154
+        }
+      ]
+    },
+    {
+      "id": "p19",
+      "start": 49.412,
+      "end": 51.396,
+      "windows": [
+        "P25"
+      ],
+      "text": "من أول طلب…",
+      "words": [
+        {
+          "id": "p19.w01",
+          "text": "من",
+          "start": 49.44,
+          "end": 49.48,
+          "confidence": 0.0064
+        },
+        {
+          "id": "p19.w02",
+          "text": "أول",
+          "start": 49.54,
+          "end": 49.78,
+          "confidence": 0.4183
+        },
+        {
+          "id": "p19.w03",
+          "text": "طلب…",
+          "start": 50.0,
+          "end": 50.18,
+          "confidence": 0.3793
+        }
+      ]
+    },
+    {
+      "id": "p20",
+      "start": 52.589,
+      "end": 53.173,
+      "windows": [
+        "P26"
+      ],
+      "text": "حتى يرجع يشري مرة أخرى.",
+      "words": [
+        {
+          "id": "p20.w01",
+          "text": "حتى",
+          "start": 50.28,
+          "end": 50.44,
+          "confidence": 0.9891
+        },
+        {
+          "id": "p20.w02",
+          "text": "يرجع",
+          "start": 50.48,
+          "end": 50.58,
+          "confidence": 0.0141
+        },
+        {
+          "id": "p20.w03",
+          "text": "يشري",
+          "start": 50.84,
+          "end": 51.04,
+          "confidence": 0.0687
+        },
+        {
+          "id": "p20.w04",
+          "text": "مرة",
+          "start": 51.08,
+          "end": 51.14,
+          "confidence": 0.0021
+        },
+        {
+          "id": "p20.w05",
+          "text": "أخرى.",
+          "start": 51.28,
+          "end": 52.6,
+          "confidence": 0.7151
+        }
+      ]
+    },
+    {
+      "id": "p21",
+      "start": 54.278,
+      "end": 55.458,
+      "windows": [
+        "P27"
+      ],
+      "text": "Sooq Pro مش قالب عادي.",
+      "words": [
+        {
+          "id": "p21.w01",
+          "text": "Sooq",
+          "start": 52.7,
+          "end": 52.92,
+          "confidence": 0.1632
+        },
+        {
+          "id": "p21.w02",
+          "text": "Pro",
+          "start": 53.04,
+          "end": 53.18,
+          "confidence": 0.6837
+        },
+        {
+          "id": "p21.w03",
+          "text": "مش",
+          "start": 54.3,
+          "end": 54.46,
+          "confidence": 0.4695
+        },
+        {
+          "id": "p21.w04",
+          "text": "قالب",
+          "start": 54.64,
+          "end": 54.82,
+          "confidence": 0.0991
+        },
+        {
+          "id": "p21.w05",
+          "text": "عادي.",
+          "start": 54.98,
+          "end": 55.16,
+          "confidence": 0.2962
+        }
+      ]
+    },
+    {
+      "id": "p22",
+      "start": 56.188,
+      "end": 58.045,
+      "windows": [
+        "P28"
+      ],
+      "text": "قالب يبيع…",
+      "words": [
+        {
+          "id": "p22.w01",
+          "text": "قالب",
+          "start": 56.32,
+          "end": 56.6,
+          "confidence": 0.511
+        },
+        {
+          "id": "p22.w02",
+          "text": "يبيع…",
+          "start": 56.98,
+          "end": 57.16,
+          "confidence": 0.0694
+        }
+      ]
+    },
+    {
+      "id": "p23",
+      "start": 59.065,
+      "end": 60.2,
+      "windows": [
+        "P29"
+      ],
+      "text": "ويرجّعلك الـclient.",
+      "words": [
+        {
+          "id": "p23.w01",
+          "text": "ويرجّعلك",
+          "start": 57.32,
+          "end": 57.7,
+          "confidence": 0.191
+        },
+        {
+          "id": "p23.w02",
+          "text": "الـclient.",
+          "start": 59.56,
+          "end": 60.18,
+          "confidence": 0.2098
+        }
+      ]
+    }
+  ]
+}
