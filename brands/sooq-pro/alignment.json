@@ -660,14 +660,14 @@
       "windows": [
         "P24"
       ],
-      "text": "19 وحدة…",
+      "text": "تسعطاش وحدة…",
       "words": [
         {
           "id": "p18.w01",
-          "text": "19",
-          "start": 46.56,
-          "end": 46.82,
-          "confidence": 1.0
+          "text": "تسعطاش",
+          "start": 47.42,
+          "end": 48.32,
+          "confidence": 0.9674
         },
         {
           "id": "p18.w02",
