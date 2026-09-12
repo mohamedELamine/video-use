@@ -660,56 +660,21 @@
       "windows": [
         "P24"
       ],
-      "text": "كل ميزة تخدم جزء من رحلة الـclient.",
+      "text": "19 وحدة…",
       "words": [
         {
           "id": "p18.w01",
-          "text": "كل",
-          "start": 46.58,
-          "end": 47.24,
-          "confidence": 0.768
+          "text": "19",
+          "start": 46.56,
+          "end": 46.82,
+          "confidence": 1.0
         },
         {
           "id": "p18.w02",
-          "text": "ميزة",
-          "start": 47.3,
-          "end": 47.38,
-          "confidence": 0.0014
-        },
-        {
-          "id": "p18.w03",
-          "text": "تخدم",
-          "start": 47.42,
-          "end": 47.52,
-          "confidence": 0.0062
-        },
-        {
-          "id": "p18.w04",
-          "text": "جزء",
-          "start": 47.56,
-          "end": 47.72,
-          "confidence": 0.1074
-        },
-        {
-          "id": "p18.w05",
-          "text": "من",
-          "start": 47.98,
-          "end": 48.06,
-          "confidence": 0.2346
-        },
-        {
-          "id": "p18.w06",
-          "text": "رحلة",
-          "start": 48.3,
-          "end": 48.44,
-          "confidence": 0.0774
-        },
-        {
-          "id": "p18.w07",
-          "text": "الـclient.",
-          "start": 48.64,
-          "end": 49.4,
-          "confidence": 0.2154
+          "text": "وحدة…",
+          "start": 48.4,
+          "end": 48.64,
+          "confidence": 0.9803
         }
       ]
     },
@@ -720,28 +685,49 @@
       "windows": [
         "P25"
       ],
-      "text": "من أول طلب…",
+      "text": "تشعل غير اللي يحتاجهم المتجر تاعك.",
       "words": [
         {
           "id": "p19.w01",
-          "text": "من",
-          "start": 49.44,
-          "end": 49.48,
-          "confidence": 0.0064
+          "text": "تشعل",
+          "start": 49.4,
+          "end": 49.78,
+          "confidence": 0.8713
         },
         {
           "id": "p19.w02",
-          "text": "أول",
-          "start": 49.54,
-          "end": 49.78,
-          "confidence": 0.4183
+          "text": "غير",
+          "start": 49.86,
+          "end": 50.0,
+          "confidence": 0.4453
         },
         {
           "id": "p19.w03",
-          "text": "طلب…",
-          "start": 50.0,
-          "end": 50.18,
-          "confidence": 0.3793
+          "text": "اللي",
+          "start": 50.06,
+          "end": 50.14,
+          "confidence": 0.0295
+        },
+        {
+          "id": "p19.w04",
+          "text": "يحتاجهم",
+          "start": 50.2,
+          "end": 50.64,
+          "confidence": 0.9675
+        },
+        {
+          "id": "p19.w05",
+          "text": "المتجر",
+          "start": 50.7,
+          "end": 51.02,
+          "confidence": 0.8168
+        },
+        {
+          "id": "p19.w06",
+          "text": "تاعك.",
+          "start": 51.08,
+          "end": 51.36,
+          "confidence": 0.7808
         }
       ]
     },
@@ -752,42 +738,21 @@
       "windows": [
         "P26"
       ],
-      "text": "حتى يرجع يشري مرة أخرى.",
+      "text": "Sooq Pro.",
       "words": [
         {
           "id": "p20.w01",
-          "text": "حتى",
-          "start": 50.28,
-          "end": 50.44,
-          "confidence": 0.9891
+          "text": "Sooq",
+          "start": 52.7,
+          "end": 52.92,
+          "confidence": 0.1632
         },
         {
           "id": "p20.w02",
-          "text": "يرجع",
-          "start": 50.48,
-          "end": 50.58,
-          "confidence": 0.0141
-        },
-        {
-          "id": "p20.w03",
-          "text": "يشري",
-          "start": 50.84,
-          "end": 51.04,
-          "confidence": 0.0687
-        },
-        {
-          "id": "p20.w04",
-          "text": "مرة",
-          "start": 51.08,
-          "end": 51.14,
-          "confidence": 0.0021
-        },
-        {
-          "id": "p20.w05",
-          "text": "أخرى.",
-          "start": 51.28,
-          "end": 52.6,
-          "confidence": 0.7151
+          "text": "Pro.",
+          "start": 53.04,
+          "end": 53.18,
+          "confidence": 0.6837
         }
       ]
     },
@@ -798,42 +763,28 @@
       "windows": [
         "P27"
       ],
-      "text": "Sooq Pro مش قالب عادي.",
+      "text": "متجر يبيع اليوم…",
       "words": [
         {
           "id": "p21.w01",
-          "text": "Sooq",
-          "start": 52.7,
-          "end": 52.92,
-          "confidence": 0.1632
+          "text": "متجر",
+          "start": 54.3,
+          "end": 54.64,
+          "confidence": 0.9752
         },
         {
           "id": "p21.w02",
-          "text": "Pro",
-          "start": 53.04,
-          "end": 53.18,
-          "confidence": 0.6837
+          "text": "يبيع",
+          "start": 54.72,
+          "end": 54.98,
+          "confidence": 0.989
         },
         {
           "id": "p21.w03",
-          "text": "مش",
-          "start": 54.3,
-          "end": 54.46,
-          "confidence": 0.4695
-        },
-        {
-          "id": "p21.w04",
-          "text": "قالب",
-          "start": 54.64,
-          "end": 54.82,
-          "confidence": 0.0991
-        },
-        {
-          "id": "p21.w05",
-          "text": "عادي.",
-          "start": 54.98,
-          "end": 55.16,
-          "confidence": 0.2962
+          "text": "اليوم…",
+          "start": 55.06,
+          "end": 55.38,
+          "confidence": 0.9772
         }
       ]
     },
@@ -844,21 +795,35 @@
       "windows": [
         "P28"
       ],
-      "text": "قالب يبيع…",
+      "text": "وعلامة تكبر مع الوقت.",
       "words": [
         {
           "id": "p22.w01",
-          "text": "قالب",
-          "start": 56.32,
-          "end": 56.6,
-          "confidence": 0.511
+          "text": "وعلامة",
+          "start": 56.2,
+          "end": 56.8,
+          "confidence": 0.926
         },
         {
           "id": "p22.w02",
-          "text": "يبيع…",
-          "start": 56.98,
-          "end": 57.16,
-          "confidence": 0.0694
+          "text": "تكبر",
+          "start": 57.0,
+          "end": 57.38,
+          "confidence": 0.9951
+        },
+        {
+          "id": "p22.w03",
+          "text": "مع",
+          "start": 57.48,
+          "end": 57.58,
+          "confidence": 0.9971
+        },
+        {
+          "id": "p22.w04",
+          "text": "الوقت.",
+          "start": 57.66,
+          "end": 57.96,
+          "confidence": 0.9957
         }
       ]
     },
@@ -869,21 +834,21 @@
       "windows": [
         "P29"
       ],
-      "text": "ويرجّعلك الـclient.",
+      "text": "من تشكيل.",
       "words": [
         {
           "id": "p23.w01",
-          "text": "ويرجّعلك",
-          "start": 57.32,
-          "end": 57.7,
-          "confidence": 0.191
+          "text": "من",
+          "start": 59.08,
+          "end": 59.18,
+          "confidence": 0.9924
         },
         {
           "id": "p23.w02",
-          "text": "الـclient.",
-          "start": 59.56,
+          "text": "تشكيل.",
+          "start": 59.28,
           "end": 60.18,
-          "confidence": 0.2098
+          "confidence": 0.9865
         }
       ]
     }
