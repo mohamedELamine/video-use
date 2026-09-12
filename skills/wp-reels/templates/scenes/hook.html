@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="{{lang}}">
+  <head><meta charset="UTF-8" /><title>{{id}}</title></head>
+  <body>
+    <template>
+      <style>
+        {{fontface}}
+        #root { position: absolute; inset: 0; direction: {{dir}}; font-family: "{{font}}", system-ui, sans-serif; color: {{fg}}; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 96px 200px; text-align: center; }
+        .eyebrow { display: inline-block; font-weight: 700; font-size: 34px; color: {{accent}}; background: color-mix(in srgb, {{accent}} 14%, transparent); border: 2px solid color-mix(in srgb, {{accent}} 45%, transparent); border-radius: 999px; padding: 8px 36px; margin-bottom: 56px; }
+        .headline { font-weight: 800; font-size: 124px; line-height: 1.22; }
+        .w { display: inline-block; margin: 0 10px; will-change: transform, filter; }
+        .accent { color: {{accent}}; }
+        .sub { margin-top: 44px; font-weight: 700; font-size: 44px; color: color-mix(in srgb, {{fg}} 72%, transparent); }
+        .sub .w { margin: 0 6px; }
+      </style>
+      <div id="root" data-composition-id="{{id}}" data-width="{{width}}" data-height="{{height}}">
+        <div class="eyebrow">{{eyebrow}}</div>
+        <div class="headline"><span class="words">{{headline}}</span> <span class="words accent">{{headline_accent}}</span></div>
+        <div class="sub"><span class="words">{{sub}}</span></div>
+      </div>
+      <script>
+        (function () {
+          var S = '[data-composition-id="{{id}}"] ';
+          // split every .words span into per-word inline-blocks (blur-in needs a box per word)
+          document.querySelectorAll(S + ".words").forEach(function (el) {
+            var words = el.textContent.trim().split(/\s+/).filter(Boolean);
+            el.textContent = "";
+            words.forEach(function (w) { var s = document.createElement("span"); s.className = "w"; s.textContent = w; el.appendChild(s); });
+          });
+          var D = {{duration}};
+          var tl = gsap.timeline({ paused: true });
+          tl.fromTo(S + ".eyebrow", { opacity: 0, y: 24, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out" }, 0.1);
+          tl.fromTo(S + ".headline .w", { opacity: 0, y: 46, filter: "blur(18px)", scale: 1.06 },
+            { opacity: 1, y: 0, filter: "blur(0px)", scale: 1, duration: 0.7, ease: "power3.out", stagger: 0.11 }, 0.35);
+          tl.fromTo(S + ".sub .w", { opacity: 0, y: 18, filter: "blur(8px)" },
+            { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power2.out", stagger: 0.06 }, 1.1);
+          tl.to(S + ".headline, " + S + ".sub, " + S + ".eyebrow", { opacity: 0, y: -40, filter: "blur(12px)", duration: 0.35, ease: "power2.in", stagger: 0.03 }, Math.max(1.8, D - 0.42));
+          window.__timelines["{{id}}"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>

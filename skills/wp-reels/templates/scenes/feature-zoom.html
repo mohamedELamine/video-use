@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="{{lang}}">
+  <head><meta charset="UTF-8" /><title>{{id}}</title></head>
+  <body>
+    <template>
+      <style>
+        {{fontface}}
+        #root { position: absolute; inset: 0; direction: {{dir}}; font-family: "{{font}}", system-ui, sans-serif; color: {{fg}}; overflow: hidden; }
+        .callout { position: absolute; top: 300px; left: 0; right: 0; text-align: center; z-index: 3; }
+        .callout .w { display: inline-block; font-weight: 800; font-size: 88px; line-height: 1.2; margin: 0 8px; text-shadow: 0 10px 40px rgba(0,0,0,.45); }
+        .accent { color: {{accent}}; }
+        .card { position: absolute; left: 60px; top: 640px; width: 960px; height: 540px; border-radius: 26px; overflow: hidden; background: #fff; box-shadow: 0 60px 140px rgba(0,0,0,.55), 0 0 0 2px rgba(255,255,255,.08); will-change: transform; }
+        .zoom { position: absolute; inset: 0; transform-origin: {{zoom_x}}% {{zoom_y}}%; will-change: transform; }
+        .zoom img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+        .ring { position: absolute; left: calc({{zoom_x}}% - 70px); top: calc({{zoom_y}}% - 70px); width: 140px; height: 140px; border-radius: 50%; border: 5px solid {{accent}}; box-shadow: 0 0 0 10px color-mix(in srgb, {{accent}} 25%, transparent); }
+        .glow { position: absolute; left: 140px; top: 700px; width: 800px; height: 800px; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, {{accent}} 35%, transparent) 0%, transparent 65%); filter: blur(40px); }
+      </style>
+      <div id="root" data-composition-id="{{id}}" data-width="{{width}}" data-height="{{height}}">
+        <div class="glow"></div>
+        <div class="callout"><span class="words">{{callout}}</span> <span class="words accent">{{callout_accent}}</span></div>
+        <div class="card"><div class="zoom"><img src="{{screenshot}}" alt="" /><div class="ring"></div></div></div>
+      </div>
+      <script>
+        (function () {
+          var S = '[data-composition-id="{{id}}"] ';
+          document.querySelectorAll(S + ".words").forEach(function (el) {
+            var words = el.textContent.trim().split(/\s+/).filter(Boolean); el.textContent = "";
+            words.forEach(function (w) { var s = document.createElement("span"); s.className = "w"; s.textContent = w; el.appendChild(s); });
+          });
+          var D = {{duration}};
+          var tl = gsap.timeline({ paused: true });
+          tl.fromTo(S + ".card", { opacity: 0, y: 120, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power3.out" }, 0);
+          tl.fromTo(S + ".callout .w", { opacity: 0, y: 40, filter: "blur(16px)" },
+            { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.6, ease: "power3.out", stagger: 0.09 }, 0.3);
+          // punch-in to the feature, ring lands on the payoff
+          tl.fromTo(S + ".zoom", { scale: 1 }, { scale: {{zoom_scale}}, duration: 1.2, ease: "power2.inOut" }, 0.9);
+          tl.fromTo(S + ".ring", { opacity: 0, scale: 1.8 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 1.9);
+          tl.to(S + ".card", { opacity: 0, y: -80, scale: 0.96, duration: 0.4, ease: "power2.in" }, D - 0.4);
+          tl.to(S + ".callout .w", { opacity: 0, y: -30, filter: "blur(10px)", duration: 0.3, ease: "power2.in", stagger: 0.03 }, D - 0.4);
+          window.__timelines["{{id}}"] = tl;
+        })();
+      </script>
+    </template>
+  </body>
+</html>
