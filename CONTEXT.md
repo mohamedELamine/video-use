@@ -34,8 +34,24 @@ The recorded narration. Canonical for timing and for the audio track itself.
 Matching script to voice-over to produce addressable, timestamped words. Distinct from transcription, which would derive the words themselves.
 _Avoid_: Transcription, ASR
 
+**Beat**:
+A unit of narrative *argument* — one thing the film is saying. Owned by the narrative planner. One beat yields one or more shots; it is never a unit of screen time, and collapsing it into one is how a film becomes a slideshow.
+_Avoid_: Scene, section, segment
+
 **Shot**:
-One continuous unit of screen time in the spec, carrying its own cues.
+A unit of visual *execution*: one continuous stretch of screen time in the spec, carrying its own cues. Owned by the shot planner. Belongs to exactly one beat.
+_Avoid_: Scene, sequence, clip
+
+**Archetype**:
+A named directing strategy — `launch` is the first — declared as *constraints* over beat kinds: which are required, optional or repeatable, plus partial ordering and initial/terminal rules. Never an ordered template. A new directing strategy adds a declaration; it does not change the shared narrative schema.
+_Avoid_: Template, format, structure
+
+**Speech-safe boundary**:
+A point a beat may start or end on without cutting speech. Phrase boundaries are the first preference and a high-confidence aligned word boundary the second, used when the narrative genuinely turns inside a phrase. An arbitrary mid-word timestamp is never one. Silence detection *supplies candidates*; it is not the definition.
+
+**Promotion**:
+Presenting a product capability or claim as a thing the film is asserting. A capability may not be promoted unless it is grounded in the narration. Distinct from a **supporting visual**, which explains or proves an already-narrated idea and introduces no new claim.
+_Avoid_: Showing, featuring, covering
 
 **Cue**:
 A timed beat *inside* a shot, so intra-shot payoff timing is directable. Stored relative to its shot's start.
