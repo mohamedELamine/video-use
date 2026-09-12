@@ -53,6 +53,20 @@ A point a beat may start or end on without cutting speech. Phrase boundaries are
 Presenting a product capability or claim as a thing the film is asserting. A capability may not be promoted unless it is grounded in the narration. Distinct from a **supporting visual**, which explains or proves an already-narrated idea and introduces no new claim.
 _Avoid_: Showing, featuring, covering
 
+**Narrative payoff**:
+The moment a beat's argument lands. Zero or one per beat — a beat that merely sets up a problem has none. Identified upstream as a semantic choice; turned into an executable cue downstream.
+_Avoid_: Highlight, hit, sync point
+
+**Emphasis anchor**:
+A secondary synchronisation moment inside a beat, where something should land without the beat's argument resolving. A beat may carry many. Distinct from a narrative payoff: five feature cards under one argument are five anchors, not five payoffs.
+
+**Capability**:
+Something a product can substantiate, as the narrative layer sees it: a stable id, a human name, a short semantic description, and how it can be evidenced. This is the **narrative-facing projection** of product knowledge, not the whole of it — pages, states, flows and selectors exist downstream and are deliberately invisible here. Narrative planning asks what a product can substantiate and how strongly, never which URL or DOM node implements it.
+_Avoid_: Feature, function, module
+
+**Evidence mode**:
+A way a capability can be shown — recorded as an interaction, shown as a visual state, and so on. A capability may support several; one that supports none can only be stated, never demonstrated.
+
 **Cue**:
 A timed beat *inside* a shot, so intra-shot payoff timing is directable. Stored relative to its shot's start.
 
