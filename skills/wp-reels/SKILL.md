@@ -5,6 +5,20 @@ description: Film a WordPress theme (local install or demo URL) and turn it into
 
 # WP Reels
 
+> ## ⚠️ Historical spike — NOT the target architecture
+>
+> This skill is **preserved research material**, kept for the findings it paid for. Its pipeline is superseded and must not be treated as canonical.
+>
+> **Superseded:** `reel.json` → `build_reel.py` → HyperFrames owning the whole timeline. In the target system **Remotion** is the composition and final-assembly foundation, **HyperFrames** is a specialised motion engine for individual shots, and **`video-spec.json`** is the renderer-agnostic keystone every planning decision lands in. Do not extend this pipeline; do not copy its shape into new work.
+>
+> **What migrates, selectively:** recording findings → the recording substrate; useful visual and motion patterns → the reusable motion vocabulary, where justified.
+>
+> **`capture_wp.mjs` full-page capture is broken and unfixed on purpose** — `captureBeyondViewport: true` makes every "slice" a whole-page shot. Everything the capture path claims to have learned was inferred while that bug was active: see **Corrections** below before relying on hard rule 13 or on any comment in `capture_wp.mjs`.
+>
+> **This is a general product-video director for arbitrary WordPress themes and SaaS products.** Sooq Pro and this spike are validation evidence, never architectural templates.
+>
+> Map: [AI product-video director](https://github.com/mohamedELamine/video-use/issues/1).
+
 A vendored skill of `video-use`. Same principles, same hard rules, plus the ones below. Read the parent `SKILL.md` first if this is a cold start.
 
 ## What it does
@@ -24,6 +38,16 @@ The theme's *look* comes from the capture. The reel's *motion* comes from the te
 16. **`dir="rtl"` never goes on `<html>`.** HyperFrames renders a black video. Direction lives on the composition root (`brand.dir` in the spec).
 17. **9:16 safe zone.** Nothing that must be read sits in the bottom ~420px or the top ~160px of a 1080×1920 frame; templates already respect this — don't add elements outside it.
 18. **The reel project lives in `<videos_dir>/edit/reels/<reel-name>/`.** The skill directory stays clean.
+
+## Corrections — capture claims that are UNPROVEN
+
+`capture_wp.mjs` passes `captureBeyondViewport: true` on every `Page.captureScreenshot`, so Chrome returns the **whole scrollable document** each time. Reproduced on a 4500px page at `dpr: 2`: `full.png` came out 2880×45000 — the page stacked five times — and `viewport.png` was a full-page shot rather than above-the-fold. Three consequences, all of which must be **measured, not inherited**:
+
+- **The slice-and-stitch strategy has never run.** No viewport-bounded capture has ever been taken, so nothing is known about seams, overlap arithmetic, or whether stitching is the right approach at all. Re-evaluate it against genuinely viewport-bounded captures.
+- **Hard rule 13's implementation is untested.** The `UNSTICK` logic never got exercised, because Chrome handles a fixed header itself during a full-document capture. The rule is sound in principle — the seam bug is real and well known — but this code has never been shown to fix it. Test it **under the actual slicing path**, not by inferring from full-document behaviour.
+- **"One `captureScreenshot` of a tall page stalls Chrome" is not a hard rule.** It was observed once on a real tall page; the 4500px test page returned promptly. Under what document height, DOM complexity, DPR and animation load it actually fails is **unknown**. Do not promote it to a rule until that threshold is measured.
+
+Owner: [Recording substrate: frames plus DOM metadata](https://github.com/mohamedELamine/video-use/issues/4). Do not fix any of it here.
 
 ## Helpers (`helpers/`, resolve relative to this file)
 
