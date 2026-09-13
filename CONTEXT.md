@@ -71,6 +71,19 @@ _Avoid_: Showing, featuring, covering
 **Grounding reference**:
 The link from a promoted capability to the narration in its own beat that asserts it. Every promotion carries one, and the set of promotions may never exceed the set of valid grounding references — which is what stops a beat promoting six sub-capabilities when the narration named one. Code can verify a reference exists and resolves; only judgment can say it is the right one.
 
+**Grounding is asymmetric.** A planner promoting a capability the narration does not ground is a structural violation. Narration asserting something product knowledge cannot substantiate is *not*: product knowledge is always partial, so that is a review flag, not a failure. The two directions are deliberately not mirror images.
+
+**Grounding state**:
+How a narrated assertion stands against product knowledge. `grounded` — substantiated. `unresolved` — current knowledge cannot substantiate it, which raises a review flag and means exactly that: absence of evidence, not evidence of absence. `contradicted` — knowledge positively says it is false, a hard stop.
+
+`unresolved` and `contradicted` must never collapse into one state. The reviewer of an `unresolved` claim is as likely to find the product model incomplete as the script overreaching, and code cannot tell which. Negative evidence does not exist in product knowledge yet; the state is reserved so that adding it later does not require reinterpreting every existing flag.
+
+**Render job**:
+The per-render inputs: which product, which archetype, which script, which voice-over, what output is wanted. Distinct from the product, which owns brand identity, product knowledge and reusable assets.
+
+The boundary matters because one product legitimately yields many films — a launch reel and a feature reel differ in archetype, script and voice-over while sharing a product entirely. A script or voice-over filed as product knowledge quietly becomes *the* script that product has.
+_Avoid_: Config, project, run
+
 **Valid** (of a plan):
 Structurally admissible: boundaries legal, archetype constraints satisfied, every reference resolving, every promotion grounded. Deterministic and machine-checkable. **Not** a claim about whether the plan is any *good* — beat grouping, emphasis, pacing and payoff choice are quality, which no validator proves. A green validator means valid, never good.
 
