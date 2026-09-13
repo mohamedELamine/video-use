@@ -40,6 +40,11 @@ A unit of narrative *purpose* — one thing the film is doing. Owned by the narr
 Purpose, not *argument*: connective narration that turns the story without asserting anything ("هنا الفرق") has a real directing purpose and occupies real narration time, and a definition built on argument has nowhere to put it.
 _Avoid_: Scene, section, segment
 
+**Beat identity**:
+A beat's id is assigned once, at creation, and stays stable for that beat's lifetime. Its narration boundaries are **mutable properties**, carried separately, never part of the id.
+
+The distinction from aligned word ids is deliberate: a word id is anchored in the canonical script, which does not move, so deriving it from structure is safe. A beat is an *editorial* entity whose boundaries are expected to shift during planning and human review. An id derived from a start boundary either has to be renamed when the boundary moves — invalidating every shot, obligation claim and piece of review feedback pointing at it — or survives as an id that lies about where its beat starts.
+
 **Beat kind**:
 The vocabulary a planner uses to describe a beat's purpose — `HOOK`, `PROBLEM`, `REVEAL`, `POSITIONING`, `PIVOT`, `CAPABILITY`, `DIFFERENTIATION`, `PAYOFF`, `ATTRIBUTION`, `CTA`. A palette, not a sequence, and not the thing an archetype requires.
 
