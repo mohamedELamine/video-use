@@ -50,8 +50,14 @@ _Avoid_: Template, format, structure
 A point a beat may start or end on without cutting speech. Phrase boundaries are the first preference and a high-confidence aligned word boundary the second, used when the narrative genuinely turns inside a phrase. An arbitrary mid-word timestamp is never one. Silence detection *supplies candidates*; it is not the definition.
 
 **Promotion**:
-Presenting a product capability or claim as a thing the film is asserting. A capability may not be promoted unless it is grounded in the narration. Distinct from a **supporting visual**, which explains or proves an already-narrated idea and introduces no new claim.
+Presenting a product capability or claim as a thing the film is asserting. A capability may not be promoted unless it is grounded in the narration **of the beat promoting it**. Distinct from a **supporting visual**, which explains or proves an already-narrated idea and introduces no new claim.
 _Avoid_: Showing, featuring, covering
+
+**Grounding reference**:
+The link from a promoted capability to the narration in its own beat that asserts it. Every promotion carries one, and the set of promotions may never exceed the set of valid grounding references — which is what stops a beat promoting six sub-capabilities when the narration named one. Code can verify a reference exists and resolves; only judgment can say it is the right one.
+
+**Valid** (of a plan):
+Structurally admissible: boundaries legal, archetype constraints satisfied, every reference resolving, every promotion grounded. Deterministic and machine-checkable. **Not** a claim about whether the plan is any *good* — beat grouping, emphasis, pacing and payoff choice are quality, which no validator proves. A green validator means valid, never good.
 
 **Narrative payoff**:
 The moment a beat's argument lands. Zero or one per beat — a beat that merely sets up a problem has none. Identified upstream as a semantic choice; turned into an executable cue downstream.
