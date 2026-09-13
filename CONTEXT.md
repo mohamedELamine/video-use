@@ -35,15 +35,25 @@ Matching script to voice-over to produce addressable, timestamped words. Distinc
 _Avoid_: Transcription, ASR
 
 **Beat**:
-A unit of narrative *argument* — one thing the film is saying. Owned by the narrative planner. One beat yields one or more shots; it is never a unit of screen time, and collapsing it into one is how a film becomes a slideshow.
+A unit of narrative *purpose* — one thing the film is doing. Owned by the narrative planner. One beat yields one or more shots; it is never a unit of screen time, and collapsing it into one is how a film becomes a slideshow.
+
+Purpose, not *argument*: connective narration that turns the story without asserting anything ("هنا الفرق") has a real directing purpose and occupies real narration time, and a definition built on argument has nowhere to put it.
 _Avoid_: Scene, section, segment
+
+**Beat kind**:
+The vocabulary a planner uses to describe a beat's purpose — `HOOK`, `PROBLEM`, `REVEAL`, `POSITIONING`, `PIVOT`, `CAPABILITY`, `DIFFERENTIATION`, `PAYOFF`, `ATTRIBUTION`, `CTA`. A palette, not a sequence, and not the thing an archetype requires.
+
+**Narrative obligation**:
+Something a directing strategy must accomplish — capture attention early, establish what the product is, communicate meaningful value, resolve the opening promise. What an archetype actually requires. Obligations are deliberately *not* beat kinds: a film may open on the reveal and let it serve as the hook, so requiring a literal `HOOK` beat would reject a valid launch. Beat kinds are the vocabulary; obligations are the contract.
 
 **Shot**:
 A unit of visual *execution*: one continuous stretch of screen time in the spec, carrying its own cues. Owned by the shot planner. Belongs to exactly one beat.
 _Avoid_: Scene, sequence, clip
 
 **Archetype**:
-A named directing strategy — `launch` is the first — declared as *constraints* over beat kinds: which are required, optional or repeatable, plus partial ordering and initial/terminal rules. Never an ordered template. A new directing strategy adds a declaration; it does not change the shared narrative schema.
+A named directing strategy — `launch` is the first — declared as the **narrative obligations** it must satisfy, plus which beat kinds may repeat and what ordering is semantically necessary. Never an ordered template, and never a list of required beat labels: constraining labels rebuilds the template inside the validator.
+
+System-owned and product-agnostic. A product *selects* an archetype; it never authors or weakens one, or the validator means something different for every product. A new directing strategy adds a declaration; it does not change the shared narrative schema.
 _Avoid_: Template, format, structure
 
 **Speech-safe boundary**:
