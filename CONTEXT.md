@@ -87,12 +87,14 @@ _Avoid_: Config, project, run
 **Valid** (of a plan):
 Structurally admissible: boundaries legal, archetype constraints satisfied, every reference resolving, every promotion grounded. Deterministic and machine-checkable. **Not** a claim about whether the plan is any *good* — beat grouping, emphasis, pacing and payoff choice are quality, which no validator proves. A green validator means valid, never good.
 
-**Narrative payoff**:
-The moment a beat's argument lands. Zero or one per beat — a beat that merely sets up a problem has none. Identified upstream as a semantic choice; turned into an executable cue downstream.
-_Avoid_: Highlight, hit, sync point
+**Anchor**:
+A semantic timing decision inside a beat: a moment something must land on, addressed to an aligned word. An editorial entity, not a derived timestamp — so like a beat, its **identity is stable and its word address is mutable**. Each anchor has a role:
 
-**Emphasis anchor**:
-A secondary synchronisation moment inside a beat, where something should land without the beat's argument resolving. A beat may carry many. Distinct from a narrative payoff: five feature cards under one argument are five anchors, not five payoffs.
+- **payoff** — the moment the beat's purpose lands. Zero or one per beat; a beat that merely sets up a problem has none.
+- **emphasis** — a secondary moment that should land without the beat resolving. Zero or many.
+
+Five feature cards under one beat are five emphasis anchors, not five payoffs. Anchors are chosen upstream, where meaning lives, and each becomes an executable cue downstream — the cue keeps a reference to the anchor that caused it, so the lineage from narrative decision to rendered frame stays traceable.
+_Avoid_: Highlight, hit, sync point, marker
 
 **Capability**:
 Something a product can substantiate, as the narrative layer sees it: a stable id, a human name, a short semantic description, and how it can be evidenced. This is the **narrative-facing projection** of product knowledge, not the whole of it — pages, states, flows and selectors exist downstream and are deliberately invisible here. Narrative planning asks what a product can substantiate and how strongly, never which URL or DOM node implements it.
