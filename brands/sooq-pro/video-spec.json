@@ -1,0 +1,173 @@
+{
+  "version": "0.1.0",
+
+  "job": {
+    "product": "sooq-pro",
+    "archetype": "launch",
+    "script": "brands/sooq-pro/script.md",
+    "voiceover": "voiceover.wav",
+    "alignment": "brands/sooq-pro/alignment.json",
+    "output": {
+      "format": "vertical",
+      "resolution": [1080, 1920],
+      "fps": 30,
+      "codec": "h264"
+    }
+  },
+
+  "brand": "sooq-pro",
+
+  "beats": [
+    {
+      "id": "b01",
+      "kind": "HOOK",
+      "narration": "تفتح متجر أونلاين ساهل…",
+      "start_word": "p01.w01",
+      "end_word": "p01.w04",
+      "promotions": []
+    },
+    {
+      "id": "b02",
+      "kind": "PROBLEM",
+      "narration": "بصح تبني متجر يبيع… ويرجّعلك الـclient؟ هنا الفرق.",
+      "start_word": "p02.w01",
+      "end_word": "p03.w02",
+      "promotions": []
+    },
+    {
+      "id": "b03",
+      "kind": "REVEAL",
+      "narration": "هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.",
+      "start_word": "p04.w01",
+      "end_word": "p05.w13",
+      "promotions": [
+        {
+          "capability_id": "arabic-first-design",
+          "grounding_phrase": "p05"
+        }
+      ]
+    },
+    {
+      "id": "b04",
+      "kind": "CAPABILITY",
+      "narration": "يحب يشري بسرعة؟ يكوماندي مباشرة من صفحة المنتج. الاسم… النيميرو… الولاية والمدينة… وسعر التوصيل يتحسبلو في الحين. يختار اللون والمقاس، يكونفيرمي… وخلاص.",
+      "start_word": "p06.w01",
+      "end_word": "p11.w01",
+      "promotions": [
+        {
+          "capability_id": "quick-order",
+          "grounding_phrase": "p07"
+        },
+        {
+          "capability_id": "live-shipping-calc",
+          "grounding_phrase": "p09"
+        }
+      ]
+    },
+    {
+      "id": "b05",
+      "kind": "CAPABILITY",
+      "narration": "بصح البيع ما يوقفش هنا. نقاط الوفاء… عجلة الحظ… الكوبونات… واتساب… المفضّلة… تسعطاش وحدة… تشعل غير اللي يحتاجهم المتجر تاعك.",
+      "start_word": "p12.w01",
+      "end_word": "p19.w06",
+      "promotions": [
+        {
+          "capability_id": "retention-modules",
+          "grounding_phrase": "p18"
+        }
+      ]
+    },
+    {
+      "id": "b06",
+      "kind": "PAYOFF",
+      "narration": "Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت.",
+      "start_word": "p20.w01",
+      "end_word": "p22.w04",
+      "promotions": []
+    },
+    {
+      "id": "b07",
+      "kind": "CTA",
+      "narration": "من تشكيل.",
+      "start_word": "p23.w01",
+      "end_word": "p23.w02",
+      "promotions": [
+        {
+          "capability_id": "tashkil-brand",
+          "grounding_phrase": "p23"
+        }
+      ]
+    }
+  ],
+
+  "shots": [
+    {
+      "id": "s01",
+      "beat": "b01",
+      "intent": "text-only title card — الجملة تظهر كلمة بكلمة على خلفية داكنة"
+    },
+    {
+      "id": "s02",
+      "beat": "b02",
+      "intent": "split contrast — يسار: متجر عادي، يمين: فارغ / علامة سؤال"
+    },
+    {
+      "id": "s03",
+      "beat": "b03",
+      "intent": "product name reveal — شعار Sooq Pro يظهر مع tagline"
+    },
+    {
+      "id": "s04",
+      "beat": "b04",
+      "intent": "screen recording — تدفق الطلب السريع من صفحة المنتج حتى التأكيد"
+    },
+    {
+      "id": "s05",
+      "beat": "b04",
+      "intent": "callout card — سعر التوصيل يُحسب لحظياً، رقم يظهر بـ counter animation"
+    },
+    {
+      "id": "s06",
+      "beat": "b05",
+      "intent": "modules grid — 19 أيقونة تضيء تباعاً مع كل وحدة تُذكر"
+    },
+    {
+      "id": "s07",
+      "beat": "b06",
+      "intent": "brand closing card — اسم المنتج كبير، tagline تحته"
+    },
+    {
+      "id": "s08",
+      "beat": "b07",
+      "intent": "تشكيل logo fade in"
+    }
+  ],
+
+  "capabilities": [
+    {
+      "id": "arabic-first-design",
+      "name": "تصميم عربي من الأصل",
+      "description": "القالب مبني للعربية والـ RTL من الصفر، لا ترجمة"
+    },
+    {
+      "id": "quick-order",
+      "name": "الطلب السريع",
+      "description": "إتمام الطلب مباشرة من صفحة المنتج بدون cart"
+    },
+    {
+      "id": "live-shipping-calc",
+      "name": "حساب التوصيل اللحظي",
+      "description": "سعر التوصيل يُحسب فور اختيار الولاية والمدينة"
+    },
+    {
+      "id": "retention-modules",
+      "name": "وحدات الولاء والاحتفاظ",
+      "description": "19 وحدة قابلة للتفعيل: نقاط، عجلة حظ، كوبونات، واتساب، مفضّلة وغيرها"
+    },
+    {
+      "id": "tashkil-brand",
+      "name": "تشكيل",
+      "description": "الشركة المطورة والمسوّقة للمنتج"
+    }
+  ]
+}
