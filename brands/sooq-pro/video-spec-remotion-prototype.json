@@ -1,0 +1,244 @@
+{
+  "_prototype": "THROWAWAY — answers ticket #11: can video-spec.json drive the shipped Remotion comp without leaking renderer concerns into the spec?",
+  "version": "0.1.0",
+
+  "job": {
+    "product": "sooq-pro",
+    "archetype": "launch",
+    "script": "brands/sooq-pro/script.md",
+    "voiceover": "voiceover.wav",
+    "alignment": "brands/sooq-pro/alignment.json",
+    "output": {
+      "format": "vertical",
+      "resolution": [1080, 1920],
+      "fps": 30,
+      "codec": "h264"
+    }
+  },
+
+  "brand": "sooq-pro",
+
+  "beats": [
+    {
+      "id": "b01",
+      "kind": "HOOK",
+      "narration": "تفتح متجر أونلاين ساهل… بصح تبني متجر يبيع… ويرجّعلك الـclient؟",
+      "start_word": "p01.w01",
+      "end_word": "p02.w06",
+      "anchors": [
+        { "id": "a-b01-emphasis", "role": "emphasis", "word": "p02.w04" }
+      ],
+      "promotions": []
+    },
+    {
+      "id": "b02",
+      "kind": "PROBLEM",
+      "narration": "هنا الفرق.",
+      "start_word": "p03.w01",
+      "end_word": "p03.w02",
+      "anchors": [
+        { "id": "a-b02-payoff", "role": "payoff", "word": "p03.w02" }
+      ],
+      "promotions": []
+    },
+    {
+      "id": "b03",
+      "kind": "REVEAL",
+      "narration": "هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.",
+      "start_word": "p04.w01",
+      "end_word": "p05.w15",
+      "anchors": [
+        { "id": "a-b03-payoff", "role": "payoff", "word": "p04.w03" },
+        { "id": "a-b03-emphasis", "role": "emphasis", "word": "p05.w04" }
+      ],
+      "promotions": [
+        { "capability_id": "arabic-first-design", "grounding_phrase": "p05" }
+      ]
+    },
+    {
+      "id": "b04",
+      "kind": "CAPABILITY",
+      "narration": "يحب يشري بسرعة؟ يكوماندي مباشرة من صفحة المنتج. الاسم… النيميرو… الولاية والمدينة… وسعر التوصيل يتحسبلو في الحين. يختار اللون والمقاس، يكونفيرمي… وخلاص.",
+      "start_word": "p06.w01",
+      "end_word": "p11.w01",
+      "anchors": [
+        { "id": "a-b04-payoff",   "role": "payoff",   "word": "p10.w04" },
+        { "id": "a-b04-emphasis", "role": "emphasis", "word": "p09.w05" }
+      ],
+      "promotions": [
+        { "capability_id": "quick-order",       "grounding_phrase": "p07" },
+        { "capability_id": "live-shipping-calc","grounding_phrase": "p09" }
+      ]
+    },
+    {
+      "id": "b05",
+      "kind": "CAPABILITY",
+      "narration": "بصح البيع ما يوقفش هنا. نقاط الوفاء… عجلة الحظ… الكوبونات… واتساب… المفضّلة… تسعطاش وحدة… تشعل غير اللي يحتاجهم المتجر تاعك.",
+      "start_word": "p12.w01",
+      "end_word": "p19.w06",
+      "anchors": [
+        { "id": "a-b05-payoff",   "role": "payoff",   "word": "p19.w01" },
+        { "id": "a-b05-emphasis", "role": "emphasis", "word": "p18.w01" }
+      ],
+      "promotions": [
+        { "capability_id": "retention-modules", "grounding_phrase": "p18" }
+      ]
+    },
+    {
+      "id": "b06",
+      "kind": "PAYOFF",
+      "narration": "Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت.",
+      "start_word": "p20.w01",
+      "end_word": "p22.w04",
+      "anchors": [
+        { "id": "a-b06-payoff", "role": "payoff", "word": "p20.w01" }
+      ],
+      "promotions": []
+    },
+    {
+      "id": "b07",
+      "kind": "CTA",
+      "narration": "من تشكيل.",
+      "start_word": "p23.w01",
+      "end_word": "p23.w02",
+      "anchors": [],
+      "promotions": [
+        { "capability_id": "tashkil-brand", "grounding_phrase": "p23" }
+      ]
+    }
+  ],
+
+  "shots": [
+    {
+      "id": "s01",
+      "beat": "b01",
+      "start_word": "p01.w01",
+      "end_word": "p02.w06",
+      "evidence_mode": "supporting",
+      "_renderer_note": "Hook: dark bg, animated text reveal + split bar. Maps to Hook component."
+    },
+    {
+      "id": "s02",
+      "beat": "b02",
+      "start_word": "p03.w01",
+      "end_word": "p03.w02",
+      "evidence_mode": "supporting",
+      "_renderer_note": "Difference: light bg, large كلمة + accent bar. Maps to Difference component."
+    },
+    {
+      "id": "s03",
+      "beat": "b03",
+      "start_word": "p04.w01",
+      "end_word": "p04.w03",
+      "evidence_mode": "visual-state",
+      "capability_id": "arabic-first-design",
+      "_renderer_note": "ProductReveal: dark bg, shopping-bag-3d.png + wordmark. Maps to ProductReveal component."
+    },
+    {
+      "id": "s04",
+      "beat": "b03",
+      "start_word": "p05.w01",
+      "end_word": "p05.w15",
+      "evidence_mode": "supporting",
+      "_renderer_note": "Journey: 4-step customer journey card. Maps to Journey component."
+    },
+    {
+      "id": "s05",
+      "beat": "b04",
+      "start_word": "p06.w01",
+      "end_word": "p07.w05",
+      "evidence_mode": "visual-state",
+      "capability_id": "quick-order",
+      "camera": { "mode": "focus", "target_element": "product-buybox" },
+      "_renderer_note": "ProductPage: screenshot 01-product-buybox-quick-order.png + Ken Burns. Maps to ProductPage component."
+    },
+    {
+      "id": "s06",
+      "beat": "b04",
+      "start_word": "p08.w01",
+      "end_word": "p09.w05",
+      "evidence_mode": "visual-state",
+      "capability_id": "live-shipping-calc",
+      "_renderer_note": "QuickOrder: animated form fields + shipping price reveal. Maps to QuickOrder component."
+    },
+    {
+      "id": "s07",
+      "beat": "b04",
+      "start_word": "p10.w01",
+      "end_word": "p11.w01",
+      "evidence_mode": "visual-state",
+      "capability_id": "quick-order",
+      "_renderer_note": "Variants: colour/size selectors + order confirmation. Maps to Variants component."
+    },
+    {
+      "id": "s08",
+      "beat": "b05",
+      "start_word": "p12.w01",
+      "end_word": "p12.w05",
+      "evidence_mode": "supporting",
+      "_renderer_note": "BeyondSale: statement card. Maps to BeyondSale component."
+    },
+    {
+      "id": "s09",
+      "beat": "b05",
+      "start_word": "p13.w01",
+      "end_word": "p17.w01",
+      "evidence_mode": "visual-state",
+      "capability_id": "retention-modules",
+      "_renderer_note": "ModuleCard ×5: loyalty, wheel, coupons, whatsapp, wishlist. Maps to 5× ModuleCard component."
+    },
+    {
+      "id": "s10",
+      "beat": "b05",
+      "start_word": "p18.w01",
+      "end_word": "p19.w06",
+      "evidence_mode": "visual-state",
+      "capability_id": "retention-modules",
+      "_renderer_note": "ModulesCount: spring-animated 19 + tagline. Maps to ModulesCount component."
+    },
+    {
+      "id": "s11",
+      "beat": "b06",
+      "start_word": "p20.w01",
+      "end_word": "p22.w04",
+      "evidence_mode": "supporting",
+      "_renderer_note": "Outro first part: wordmark + payoff lines. Part of Outro component."
+    },
+    {
+      "id": "s12",
+      "beat": "b07",
+      "start_word": "p23.w01",
+      "end_word": "p23.w02",
+      "evidence_mode": "supporting",
+      "_renderer_note": "Outro CTA: tashkeel.dev URL fade in. Part of Outro component."
+    }
+  ],
+
+  "capabilities": [
+    {
+      "id": "arabic-first-design",
+      "name": "تصميم عربي من الأصل",
+      "description": "القالب مبني للعربية والـ RTL من الصفر"
+    },
+    {
+      "id": "quick-order",
+      "name": "الطلب السريع",
+      "description": "إتمام الطلب مباشرة من صفحة المنتج بدون cart"
+    },
+    {
+      "id": "live-shipping-calc",
+      "name": "حساب التوصيل اللحظي",
+      "description": "سعر التوصيل يُحسب فور اختيار الولاية والمدينة"
+    },
+    {
+      "id": "retention-modules",
+      "name": "وحدات الولاء والاحتفاظ",
+      "description": "19 وحدة قابلة للتفعيل"
+    },
+    {
+      "id": "tashkil-brand",
+      "name": "تشكيل",
+      "description": "الشركة المطورة"
+    }
+  ]
+}
