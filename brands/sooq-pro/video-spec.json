@@ -24,6 +24,7 @@
       "narration": "تفتح متجر أونلاين ساهل…",
       "start_word": "p01.w01",
       "end_word": "p01.w04",
+      "anchors": [],
       "promotions": []
     },
     {
@@ -32,6 +33,9 @@
       "narration": "بصح تبني متجر يبيع… ويرجّعلك الـclient؟ هنا الفرق.",
       "start_word": "p02.w01",
       "end_word": "p03.w02",
+      "anchors": [
+        { "id": "a-b02-payoff", "role": "payoff", "word": "p03.w02" }
+      ],
       "promotions": []
     },
     {
@@ -39,7 +43,10 @@
       "kind": "REVEAL",
       "narration": "هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.",
       "start_word": "p04.w01",
-      "end_word": "p05.w13",
+      "end_word": "p05.w15",
+      "anchors": [
+        { "id": "a-b03-payoff", "role": "payoff", "word": "p04.w03" }
+      ],
       "promotions": [
         {
           "capability_id": "arabic-first-design",
@@ -53,6 +60,10 @@
       "narration": "يحب يشري بسرعة؟ يكوماندي مباشرة من صفحة المنتج. الاسم… النيميرو… الولاية والمدينة… وسعر التوصيل يتحسبلو في الحين. يختار اللون والمقاس، يكونفيرمي… وخلاص.",
       "start_word": "p06.w01",
       "end_word": "p11.w01",
+      "anchors": [
+        { "id": "a-b04-payoff",   "role": "payoff",   "word": "p10.w04" },
+        { "id": "a-b04-emphasis", "role": "emphasis", "word": "p09.w05" }
+      ],
       "promotions": [
         {
           "capability_id": "quick-order",
@@ -70,6 +81,10 @@
       "narration": "بصح البيع ما يوقفش هنا. نقاط الوفاء… عجلة الحظ… الكوبونات… واتساب… المفضّلة… تسعطاش وحدة… تشعل غير اللي يحتاجهم المتجر تاعك.",
       "start_word": "p12.w01",
       "end_word": "p19.w06",
+      "anchors": [
+        { "id": "a-b05-payoff",   "role": "payoff",   "word": "p19.w01" },
+        { "id": "a-b05-emphasis", "role": "emphasis", "word": "p18.w01" }
+      ],
       "promotions": [
         {
           "capability_id": "retention-modules",
@@ -83,6 +98,9 @@
       "narration": "Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت.",
       "start_word": "p20.w01",
       "end_word": "p22.w04",
+      "anchors": [
+        { "id": "a-b06-payoff", "role": "payoff", "word": "p20.w01" }
+      ],
       "promotions": []
     },
     {
@@ -91,6 +109,7 @@
       "narration": "من تشكيل.",
       "start_word": "p23.w01",
       "end_word": "p23.w02",
+      "anchors": [],
       "promotions": [
         {
           "capability_id": "tashkil-brand",
@@ -104,42 +123,62 @@
     {
       "id": "s01",
       "beat": "b01",
-      "intent": "text-only title card — الجملة تظهر كلمة بكلمة على خلفية داكنة"
+      "start_word": "p01.w01",
+      "end_word": "p01.w04",
+      "evidence_mode": "supporting"
     },
     {
       "id": "s02",
       "beat": "b02",
-      "intent": "split contrast — يسار: متجر عادي، يمين: فارغ / علامة سؤال"
+      "start_word": "p02.w01",
+      "end_word": "p03.w02",
+      "evidence_mode": "supporting"
     },
     {
       "id": "s03",
       "beat": "b03",
-      "intent": "product name reveal — شعار Sooq Pro يظهر مع tagline"
+      "start_word": "p04.w01",
+      "end_word": "p05.w15",
+      "evidence_mode": "visual-state",
+      "capability_id": "arabic-first-design"
     },
     {
       "id": "s04",
       "beat": "b04",
-      "intent": "screen recording — تدفق الطلب السريع من صفحة المنتج حتى التأكيد"
+      "start_word": "p06.w01",
+      "end_word": "p09.w05",
+      "evidence_mode": "recorded-interaction",
+      "capability_id": "quick-order"
     },
     {
       "id": "s05",
       "beat": "b04",
-      "intent": "callout card — سعر التوصيل يُحسب لحظياً، رقم يظهر بـ counter animation"
+      "start_word": "p10.w01",
+      "end_word": "p11.w01",
+      "evidence_mode": "visual-state",
+      "capability_id": "live-shipping-calc"
     },
     {
       "id": "s06",
       "beat": "b05",
-      "intent": "modules grid — 19 أيقونة تضيء تباعاً مع كل وحدة تُذكر"
+      "start_word": "p12.w01",
+      "end_word": "p19.w06",
+      "evidence_mode": "visual-state",
+      "capability_id": "retention-modules"
     },
     {
       "id": "s07",
       "beat": "b06",
-      "intent": "brand closing card — اسم المنتج كبير، tagline تحته"
+      "start_word": "p20.w01",
+      "end_word": "p22.w04",
+      "evidence_mode": "supporting"
     },
     {
       "id": "s08",
       "beat": "b07",
-      "intent": "تشكيل logo fade in"
+      "start_word": "p23.w01",
+      "end_word": "p23.w02",
+      "evidence_mode": "supporting"
     }
   ],
 
