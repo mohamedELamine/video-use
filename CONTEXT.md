@@ -112,11 +112,22 @@ _Avoid_: Template, component, layout, scene type
 **Intent vocabulary**:
 The system-owned set of intents and the content each one accepts. Like an archetype, a product selects from it and never extends it. A new intent is a vocabulary entry plus renderer support, never a change to the spec's shape; a renderer declares which intents it implements, and a plan using one it does not is caught before rendering. Kept small on purpose: coherence across a film comes from one shared visual system, not from a cap on variety.
 
+**Content slot**:
+A named place an intent defines for the shot planner to fill — a headline, a callout, a list of items, a secondary image. Filled per shot, from the plan. Not a **Role**: a role is resolved from brand identity and is the same across a whole film; a content slot is written for one shot.
+
+Items that share one frame are one slot holding a list; items that each take the whole frame, separated by cuts, are separate shots of the same intent. Line breaks, numbering, and how long text is fitted belong to the renderer, never to a slot.
+_Avoid_: Prop, field, variable
+
+**Primary asset**:
+The one asset a shot is *about* — what its camera moves over, its cursor acts on, and its element cues address. A shot has at most one; any other image it carries sits in a content slot. Evidence modes constrain the primary asset, never the intent: a recorded interaction needs a recording, a visual state needs some asset, and a stated or supporting shot needs none.
+
 **On-screen copy**:
 Every word the viewer reads, spoken or not. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
 
 **Cue**:
 A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place.
+
+A cue lands on either a **content slot** or an element of the shot's **primary asset**. What it may do follows from which: a slot can only be revealed, while an element can be revealed, change state, or be moved to by the camera. The set of cue kinds belongs to the intent vocabulary, so a new kind is a vocabulary entry, not a change to the plan's shape.
 
 Entrance choreography that answers to no anchor — a headline fading in, a list staggering — is not a cue. It belongs to the renderer.
 _Avoid_: Sync point, keyframe, hit
