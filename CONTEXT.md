@@ -121,6 +121,12 @@ _Avoid_: Prop, field, variable
 **Primary asset**:
 The one asset a shot is *about* — what its camera moves over, its cursor acts on, and its element cues address. A shot has at most one; any other image it carries sits in a content slot. Evidence modes constrain the primary asset, never the intent: a recorded interaction needs a recording, a visual state needs some asset, and a stated or supporting shot needs none.
 
+**Surface**:
+The ground a shot is set on, behind everything it shows. Named **relative to the brand**, never as an absolute colour or lightness: `base` is the brand's own background and foreground, and `alt` is an alternate surface the brand may offer through open roles. Brands differ in which one is dark, so "dark" in a plan would mean something different for every product.
+
+Chosen per shot by the shot planner. Alternating surfaces is a directing rhythm: the same intent can sit on either surface, and so can two shots of one beat. A shot that names no surface sits on `base`. A shot asking for `alt` on a brand that offers none falls back to `base`, and the fallback is flagged for review rather than rejected.
+_Avoid_: Tone, theme, mode, background, dark/light
+
 **On-screen copy**:
 Every word the viewer reads, spoken or not. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
 
