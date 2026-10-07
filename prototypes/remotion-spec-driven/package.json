@@ -1,0 +1,21 @@
+{
+  "name": "remotion-spec-driven-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "sh setup.sh",
+    "timeline": "node scripts/timeline.ts",
+    "studio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts SpecFilm out/spec-film.mp4 --codec=h264 --crf=18"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.339",
+    "@remotion/transitions": "4.0.339",
+    "remotion": "4.0.339",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

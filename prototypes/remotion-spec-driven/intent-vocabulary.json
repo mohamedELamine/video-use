@@ -1,0 +1,63 @@
+{
+  "_prototype": "THROWAWAY - intent vocabulary v1 as decided in 'The shot intent vocabulary' (#15). Location is provisional (repo structure is still fog).",
+  "version": "1",
+  "cue_kinds": {
+    "reveal": { "targets": ["slot", "element"] },
+    "state_change": { "targets": ["element"] },
+    "camera": { "targets": ["element"] }
+  },
+  "intents": {
+    "statement": {
+      "primary_asset": "forbidden",
+      "slots": {
+        "headline": { "type": "text", "required": true },
+        "kicker": { "type": "text" },
+        "body": { "type": "text" },
+        "footnote": { "type": "text" }
+      }
+    },
+    "brand": {
+      "primary_asset": "forbidden",
+      "slots": {
+        "headline": { "type": "text" },
+        "visual": { "type": "asset" },
+        "cta": { "type": "text" }
+      }
+    },
+    "product-shot": {
+      "primary_asset": "required",
+      "slots": {
+        "headline": { "type": "text" },
+        "callout": { "type": "text" }
+      }
+    },
+    "list": {
+      "primary_asset": "forbidden",
+      "slots": {
+        "headline": { "type": "text", "required": true },
+        "items": {
+          "type": "items",
+          "required": true,
+          "item": { "label": { "type": "text", "required": true }, "accent": { "type": "bool" } }
+        }
+      }
+    },
+    "feature": {
+      "primary_asset": "forbidden",
+      "slots": {
+        "headline": { "type": "text", "required": true },
+        "kicker": { "type": "text" },
+        "body": { "type": "text" },
+        "icon": { "type": "asset" }
+      }
+    },
+    "stat": {
+      "primary_asset": "forbidden",
+      "slots": {
+        "value": { "type": "text", "required": true },
+        "headline": { "type": "text", "required": true },
+        "body": { "type": "text" }
+      }
+    }
+  }
+}

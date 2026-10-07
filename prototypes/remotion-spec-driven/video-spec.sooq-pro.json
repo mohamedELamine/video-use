@@ -1,0 +1,133 @@
+{
+  "_prototype": "THROWAWAY - ticket #11. The shipped Sooq Pro reel re-expressed under #2 + #28 + #15. No timestamps, no frames, no component names.",
+  "version": "0.2.0",
+  "job": {
+    "product": "sooq-pro",
+    "archetype": "launch",
+    "script": "brands/sooq-pro/script.md",
+    "voiceover": "voiceover.wav",
+    "alignment": "brands/sooq-pro/alignment.json",
+    "output": { "resolution": [1080, 1920], "fps": 30, "codec": "h264", "tail_s": 0 }
+  },
+  "brand": "sooq-pro",
+
+  "assets": {
+    "bag_3d": { "kind": "static", "path": "reels/shopping-bag-3d.png" },
+    "buybox_still": { "kind": "screenshot", "path": "reels/screenshots/feature-states/01-product-buybox-quick-order.png" },
+    "quick_order_rec": { "kind": "recording", "path": null, "obtain": "Record the quick-order flow on a product page: fill name, phone, wilaya, city; delivery price appears. Manifest must expose `delivery_price`." },
+    "variants_rec": { "kind": "recording", "path": null, "obtain": "Record choosing colour and size, then confirming the order. Manifest must expose `confirm_button`." },
+    "icon_loyalty": { "kind": "static", "path": "icons/loyalty.svg" },
+    "icon_wheel": { "kind": "static", "path": "icons/wheel.svg" },
+    "icon_coupons": { "kind": "static", "path": "icons/coupons.svg" },
+    "icon_whatsapp": { "kind": "static", "path": "icons/whatsapp.svg" },
+    "icon_wishlist": { "kind": "static", "path": "icons/wishlist.svg" }
+  },
+
+  "beats": [
+    { "id": "b01", "kind": "HOOK", "start_word": "p01.w01", "end_word": "p02.w06",
+      "anchors": [ { "id": "a-b01-turn", "role": "emphasis", "word": "p02.w01" } ] },
+    { "id": "b02", "kind": "PIVOT", "start_word": "p03.w01", "end_word": "p03.w02", "anchors": [] },
+    { "id": "b03", "kind": "REVEAL", "start_word": "p04.w01", "end_word": "p05.w15", "anchors": [] },
+    { "id": "b04", "kind": "CAPABILITY", "start_word": "p06.w01", "end_word": "p11.w01",
+      "anchors": [
+        { "id": "a-b04-shipping", "role": "emphasis", "word": "p09.w01" },
+        { "id": "a-b04-confirm", "role": "emphasis", "word": "p10.w04" },
+        { "id": "a-b04-payoff", "role": "payoff", "word": "p11.w01" }
+      ] },
+    { "id": "b05", "kind": "CAPABILITY", "start_word": "p12.w01", "end_word": "p19.w06",
+      "anchors": [ { "id": "a-b05-payoff", "role": "payoff", "word": "p18.w01" } ] },
+    { "id": "b06", "kind": "PAYOFF", "start_word": "p20.w01", "end_word": "p22.w04", "anchors": [] },
+    { "id": "b07", "kind": "CTA", "start_word": "p23.w01", "end_word": "p23.w02",
+      "anchors": [ { "id": "a-b07-attribution", "role": "payoff", "word": "p23.w01" } ] }
+  ],
+
+  "shots": [
+    { "id": "s01", "beat": "b01", "start_word": "p01.w01", "evidence_mode": "supporting",
+      "intent": "statement",
+      "content": {
+        "kicker": "التجارة الإلكترونية، ببساطة",
+        "headline": "تفتح متجر أونلاين؟",
+        "body": ["سهل. بصح تبني متجر ", { "text": "يبيع", "accent": true }, "؟"],
+        "footnote": "ويرجّعلك الـclient"
+      },
+      "cues": [ { "anchor": "a-b01-turn", "kind": "reveal", "target": { "slot": "body" } } ] },
+
+    { "id": "s02", "beat": "b02", "start_word": "p03.w01", "evidence_mode": "supporting",
+      "intent": "statement",
+      "content": { "headline": "هنا الفرق." } },
+
+    { "id": "s03", "beat": "b03", "start_word": "p04.w01", "evidence_mode": "supporting",
+      "intent": "brand",
+      "content": { "visual": "bag_3d", "headline": "WooCommerce عربي من الأصل" } },
+
+    { "id": "s04", "beat": "b03", "start_word": "p05.w06", "evidence_mode": "stated", "capability_id": "sales-journey",
+      "intent": "list",
+      "content": {
+        "headline": ["مصمم لرحلة البيع ", { "text": "كاملة", "accent": true }],
+        "items": [
+          { "label": "أول زيارة" },
+          { "label": "قرار الشراء" },
+          { "label": "طلب مكتمل" },
+          { "label": "عميل يرجع", "accent": true }
+        ]
+      } },
+
+    { "id": "s05", "beat": "b04", "start_word": "p06.w01", "evidence_mode": "visual-state", "capability_id": "quick-order",
+      "intent": "product-shot", "asset": "buybox_still",
+      "content": {
+        "headline": ["الـclient يحب يشري ", { "text": "بسرعة", "accent": true }],
+        "callout": "مباشرة من صفحة المنتج"
+      },
+      "camera": { "mode": "focus" } },
+
+    { "id": "s06", "beat": "b04", "start_word": "p08.w01", "evidence_mode": "recorded-interaction", "capability_id": "quick-order",
+      "intent": "product-shot", "asset": "quick_order_rec",
+      "content": { "headline": "طلب سريع. بدون تعقيد." },
+      "cues": [ { "anchor": "a-b04-shipping", "kind": "state_change", "target": { "element": "delivery_price" } } ] },
+
+    { "id": "s07", "beat": "b04", "start_word": "p10.w01", "evidence_mode": "recorded-interaction", "capability_id": "quick-order",
+      "intent": "product-shot", "asset": "variants_rec",
+      "content": { "headline": "اللون والمقاس؟", "callout": "وخلاص." },
+      "cues": [
+        { "anchor": "a-b04-confirm", "kind": "state_change", "target": { "element": "confirm_button" } },
+        { "anchor": "a-b04-payoff", "kind": "reveal", "target": { "slot": "callout" } }
+      ] },
+
+    { "id": "s08", "beat": "b05", "start_word": "p12.w01", "evidence_mode": "supporting",
+      "intent": "statement",
+      "content": { "headline": ["بصح البيع ", { "text": "ما يوقفش هنا.", "accent": true }] } },
+
+    { "id": "s09", "beat": "b05", "start_word": "p13.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "feature",
+      "content": { "kicker": "منظومة تحفظ العميل", "headline": "نقاط الولاء", "body": "كل طلب يبني سببًا للعودة.", "icon": "icon_loyalty" } },
+    { "id": "s10", "beat": "b05", "start_word": "p14.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "feature",
+      "content": { "kicker": "منظومة تحفظ العميل", "headline": "عجلة الحظ", "body": "تفاعل يتحول إلى فرصة بيع.", "icon": "icon_wheel" } },
+    { "id": "s11", "beat": "b05", "start_word": "p15.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "feature",
+      "content": { "kicker": "منظومة تحفظ العميل", "headline": "الكوبونات", "body": "العرض الصحيح، في اللحظة الصحيحة.", "icon": "icon_coupons" } },
+    { "id": "s12", "beat": "b05", "start_word": "p16.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "feature",
+      "content": { "kicker": "منظومة تحفظ العميل", "headline": "واتساب", "body": "المحادثة قريبة من قرار الشراء.", "icon": "icon_whatsapp" } },
+    { "id": "s13", "beat": "b05", "start_word": "p17.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "feature",
+      "content": { "kicker": "منظومة تحفظ العميل", "headline": "المفضلة", "body": "المنتجات التي يحبها تبقى قريبة.", "icon": "icon_wishlist" } },
+
+    { "id": "s14", "beat": "b05", "start_word": "p18.w01", "evidence_mode": "stated", "capability_id": "retention-modules",
+      "intent": "stat",
+      "content": { "value": "19", "headline": "وحدة بيع وتسويق", "body": "تشعل غير اللي يحتاجهم متجرك" },
+      "cues": [ { "anchor": "a-b05-payoff", "kind": "reveal", "target": { "slot": "value" } } ] },
+
+    { "id": "s15", "beat": "b06", "start_word": "p20.w01", "evidence_mode": "supporting",
+      "intent": "brand",
+      "content": { "headline": ["متجر يبيع اليوم… ", { "text": "وعلامة تكبر مع الوقت.", "accent": true }] } },
+
+    { "id": "s16", "beat": "b07", "start_word": "p23.w01", "evidence_mode": "supporting",
+      "intent": "brand",
+      "content": {
+        "headline": ["متجر يبيع اليوم… ", { "text": "وعلامة تكبر مع الوقت.", "accent": true }],
+        "cta": "tashkeel.dev"
+      },
+      "cues": [ { "anchor": "a-b07-attribution", "kind": "reveal", "target": { "slot": "cta" } } ] }
+  ]
+}
