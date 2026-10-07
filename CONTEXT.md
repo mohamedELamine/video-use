@@ -103,6 +103,18 @@ _Avoid_: Feature, function, module
 **Evidence mode**:
 A way a capability can be shown — recorded as an interaction, shown as a visual state, and so on. A capability may support several; one that supports none can only be stated, never demonstrated.
 
+**Intent**:
+What a shot *is* on screen — a statement, a product shot, a list — named without naming any renderer component. Orthogonal to **evidence mode**: evidence mode says *why* a shot is on screen and how its capability is proven; intent says *what the viewer is looking at*. One evidence mode can be served by several intents, and one intent can serve several evidence modes; only their compatibility is checked.
+
+Two shots share an intent when they share the same content shape and ask the same thing of the viewer's eye. An intent must still make sense for a single-page SaaS product. A difference that exists only because something was hand-drawn — a mocked form standing in for a recording — is not a difference of intent.
+_Avoid_: Template, component, layout, scene type
+
+**Intent vocabulary**:
+The system-owned set of intents and the content each one accepts. Like an archetype, a product selects from it and never extends it. A new intent is a vocabulary entry plus renderer support, never a change to the spec's shape; a renderer declares which intents it implements, and a plan using one it does not is caught before rendering. Kept small on purpose: coherence across a film comes from one shared visual system, not from a cap on variety.
+
+**On-screen copy**:
+Every word the viewer reads, spoken or not. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
+
 **Cue**:
 A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place.
 
