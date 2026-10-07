@@ -104,7 +104,17 @@ _Avoid_: Feature, function, module
 A way a capability can be shown — recorded as an interaction, shown as a visual state, and so on. A capability may support several; one that supports none can only be stated, never demonstrated.
 
 **Cue**:
-A timed beat *inside* a shot, so intra-shot payoff timing is directable. Stored relative to its shot's start.
+A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place.
+
+Entrance choreography that answers to no anchor — a headline fading in, a list staggering — is not a cue. It belongs to the renderer.
+_Avoid_: Sync point, keyframe, hit
+
+**Storyboard**:
+The human-reviewable view of a plan, generated from `video-spec.json` and never authored beside it. It shows beat and shot ids so review feedback lands on a line that maps straight back to the spec; changes are made in the spec, never in the storyboard.
+
+**Asset**:
+Something a shot shows — a recording, a screenshot, a static file, a HyperFrames clip — declared once by stable id together with how to obtain it, so a shot can name an asset that does not exist yet. A shot's capability and evidence mode say *why* it is on screen; its asset says *what* is on screen.
+_Avoid_: Media, file, footage
 
 **Recording**:
 Real browser footage of a product interaction, captured as frames with DOM metadata bound to them.
