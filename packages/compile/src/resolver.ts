@@ -26,9 +26,13 @@ export class Resolver {
       return frames;
     }
 
-    // The first shot starts at frame 0
-    // let currentFrame = 0;
-    // let currentSecond = 0;
+    // Map of beat id to anchors for efficient lookup
+    const beatAnchors = new Map<string, any[]>();
+    for (const beat of plan.beats) {
+      if (beat.anchors) {
+        beatAnchors.set(beat.id, beat.anchors);
+      }
+    }
 
     for (let i = 0; i < shots.length; i++) {
       const shot = shots[i];
@@ -71,6 +75,12 @@ export class Resolver {
 
       const endFrame = Math.round(endSecond * this.options.fps);
 
+      // Resolve anchors that land via cut
+      const anchorsThisCut = this.resolveAnchorsForCut(shot, beatAnchors);
+
+      // Resolve cues in this shot
+      const cuesResolved = this.resolveCuesInShot(shot, startFrame, startSecond);
+
       frames.push({
         shot: {
           id: shot.id,
@@ -81,12 +91,65 @@ export class Resolver {
         startSecond,
         endFrame,
         endSecond,
-        anchors: [], // TODO: resolve anchors
-        cues: [], // TODO: resolve cues
+        anchors: anchorsThisCut,
+        cues: cuesResolved,
       });
     }
 
     return frames;
+  }
+
+  private resolveAnchorsForCut(shot: any, beatAnchors: Map<string, any[]>): any[] {
+    const anchors = beatAnchors.get(shot.beatId) || [];
+    const resolved: any[] = [];
+
+    for (const anchor of anchors) {
+      if (anchor.wordId === shot.startWordId) {
+        // This anchor lands via cut
+        const word = this.alignment.words.find(w => w.id === anchor.wordId);
+        if (word) {
+          resolved.push({
+            id: anchor.id,
+            role: anchor.role,
+            wordId: anchor.wordId,
+            word: word.text,
+            second: word.start,
+            frame: Math.round(word.start * this.options.fps),
+            landed: true,
+            landingType: 'cut',
+          });
+        }
+      }
+    }
+
+    return resolved;
+  }
+
+  private resolveCuesInShot(shot: any, shotStartFrame: number, _shotStartSecond: number): any[] {
+    const cuesResolved: any[] = [];
+    if (!shot.cues) return cuesResolved;
+
+    for (const cue of shot.cues) {
+      const anchorWord = this.alignment.words.find(w => w.id === cue.anchorId);
+      if (!anchorWord) continue;
+
+      const anchorSecond = anchorWord.start;
+      const anchorFrame = Math.round(anchorSecond * this.options.fps);
+      const frameOffset = anchorFrame - shotStartFrame;
+
+      cuesResolved.push({
+        id: cue.id,
+        anchorId: cue.anchorId,
+        kind: cue.kind,
+        target: cue.target,
+        anchorWord: anchorWord.text,
+        anchorSecond,
+        anchorFrame,
+        frameOffset,
+      });
+    }
+
+    return cuesResolved;
   }
 
   private collectShots(plan: Plan): Shot[] {

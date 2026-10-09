@@ -56,7 +56,7 @@
           {
             "id": "hook-statement",
             "beatId": "hook",
-            "startWordId": "w1",
+            "startWordId": "w3",
             "intent": "statement",
             "surface": "base",
             "slots": {
@@ -81,7 +81,7 @@
           {
             "id": "automation-shot",
             "beatId": "capability-1",
-            "startWordId": "w6",
+            "startWordId": "w8",
             "intent": "statement",
             "surface": "base",
             "slots": {
@@ -106,7 +106,7 @@
           {
             "id": "integration-shot",
             "beatId": "capability-2",
-            "startWordId": "w11",
+            "startWordId": "w13",
             "intent": "statement",
             "surface": "base",
             "slots": {
@@ -131,7 +131,7 @@
           {
             "id": "cta-statement",
             "beatId": "cta",
-            "startWordId": "w16",
+            "startWordId": "w17",
             "intent": "statement",
             "surface": "base",
             "slots": {

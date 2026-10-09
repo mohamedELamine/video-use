@@ -24,6 +24,8 @@ const mockCompiledPlan: CompiledPlan = {
       startSecond: 0,
       endFrame: 30,
       endSecond: 1.0,
+      anchors: [],
+      cues: [],
     },
     {
       shot: { id: 'shot-2', beatId: 'beat-1', intent: 'statement' },
@@ -31,6 +33,8 @@ const mockCompiledPlan: CompiledPlan = {
       startSecond: 1.0,
       endFrame: 60,
       endSecond: 2.0,
+      anchors: [],
+      cues: [],
     },
   ],
   storyboard: '# Storyboard',
