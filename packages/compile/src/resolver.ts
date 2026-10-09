@@ -81,6 +81,8 @@ export class Resolver {
         startSecond,
         endFrame,
         endSecond,
+        anchors: [], // TODO: resolve anchors
+        cues: [], // TODO: resolve cues
       });
     }
 

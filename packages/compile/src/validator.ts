@@ -185,6 +185,7 @@ export class Validator {
 
   private validateAnchors(plan: Plan): void {
     const anchorIds = new Set<string>();
+    const beatAnchorMap = new Map<string, string[]>(); // beatId -> anchorIds
 
     for (const beat of plan.beats) {
       if (!Array.isArray(beat.anchors)) {
@@ -192,12 +193,15 @@ export class Validator {
       }
 
       let payoffCount = 0;
+      const beatAnchors: string[] = [];
+
       for (const anchor of beat.anchors) {
         // Check uniqueness
         if (anchorIds.has(anchor.id)) {
           this.addError('ANCHOR_DUPLICATE_ID', anchor.id, `Duplicate anchor id: ${anchor.id}`);
         }
         anchorIds.add(anchor.id);
+        beatAnchors.push(anchor.id);
 
         // Check required fields
         if (!anchor.id) {
@@ -213,6 +217,12 @@ export class Validator {
           this.addError('ANCHOR_MISSING_WORD', anchor.id, 'Anchor must specify a wordId');
         } else if (!this.wordExists(anchor.wordId)) {
           this.addError('ANCHOR_WORD_NOT_FOUND', anchor.id, `Word not found: ${anchor.wordId}`);
+        } else {
+          // Check confidence
+          const word = this.alignment.words.find(w => w.id === anchor.wordId);
+          if (word?.confidence !== undefined && word.confidence < 0.5) {
+            this.addError('ANCHOR_LOW_CONFIDENCE', anchor.id, `Anchor word confidence too low: ${word.confidence}`);
+          }
         }
 
         // Check beat has at most one payoff
@@ -221,6 +231,43 @@ export class Validator {
           if (payoffCount > 1) {
             this.addError('BEAT_MULTIPLE_PAYOFFS', beat.id, 'Beat cannot have more than one payoff anchor');
           }
+        }
+      }
+
+      beatAnchorMap.set(beat.id, beatAnchors);
+    }
+
+    // Check that every anchor lands (via cut or cue)
+    this.validateAnchorLanding(plan, beatAnchorMap);
+  }
+
+  private validateAnchorLanding(plan: Plan, _beatAnchorMap: Map<string, string[]>): void {
+    for (const beat of plan.beats) {
+      // const beatAnchors = beatAnchorMap.get(beat.id) || [];
+
+      for (const anchor of beat.anchors || []) {
+        let lands = false;
+
+        // Check if lands via cut
+        for (const shot of beat.shots) {
+          if (shot.startWordId === anchor.wordId) {
+            lands = true;
+            break;
+          }
+        }
+
+        // Check if lands via cue
+        if (!lands) {
+          for (const shot of beat.shots) {
+            if (shot.cues?.some(c => c.anchorId === anchor.id)) {
+              lands = true;
+              break;
+            }
+          }
+        }
+
+        if (!lands) {
+          this.addError('ANCHOR_DOES_NOT_LAND', anchor.id, `Anchor does not land via cut or cue`);
         }
       }
     }
@@ -239,27 +286,67 @@ export class Validator {
             continue;
           }
 
+          // Check anchor exists in this beat
           if (!cue.anchorId) {
             this.addError('CUE_MISSING_ANCHOR', cue.id, 'Cue must reference an anchor');
           } else {
-            // Check anchor exists in this beat
-            const anchorExists = beat.anchors?.some(a => a.id === cue.anchorId);
-            if (!anchorExists) {
+            const anchor = beat.anchors?.find(a => a.id === cue.anchorId);
+            if (!anchor) {
               this.addError('CUE_ANCHOR_NOT_FOUND', cue.id, `Anchor not found in beat: ${cue.anchorId}`);
+            } else {
+              // Check anchor word falls within shot's extent
+              const shotStartIdx = this.getWordIndex(shot.startWordId);
+              const shotEndIdx = this.getWordIndex(beat.endWordId); // beat end, not shot end
+              const anchorIdx = this.getWordIndex(anchor.wordId);
+
+              if (shotStartIdx >= 0 && anchorIdx >= 0 && anchorIdx < shotStartIdx) {
+                this.addError('CUE_ANCHOR_BEFORE_SHOT', cue.id, `Anchor word before shot start`);
+              }
+
+              if (shotEndIdx >= 0 && anchorIdx >= 0 && anchorIdx > shotEndIdx) {
+                this.addError('CUE_ANCHOR_AFTER_BEAT', cue.id, `Anchor word after beat end`);
+              }
             }
           }
 
           if (!cue.kind) {
             this.addError('CUE_MISSING_KIND', cue.id, 'Cue must specify a kind');
           } else {
-            const kindExists = this.intents.cueKinds.some(k => k.id === cue.kind);
-            if (!kindExists) {
+            const kindDef = this.intents.cueKinds.find(k => k.id === cue.kind);
+            if (!kindDef) {
               this.addError('CUE_UNKNOWN_KIND', cue.id, `Cue kind not in vocabulary: ${cue.kind}`);
             }
           }
 
           if (!cue.target) {
             this.addError('CUE_MISSING_TARGET', cue.id, 'Cue must specify a target');
+          } else {
+            // Validate target
+            this.validateCueTarget(cue, shot);
+          }
+        }
+      }
+    }
+  }
+
+  private validateCueTarget(cue: any, shot: any): void {
+    const target = cue.target;
+    // const targetStr = typeof target === 'string' ? target : JSON.stringify(target);
+
+    // For now, simple validation
+    // Full validation would check slot existence and filling
+    if (typeof target === 'object') {
+      if (target.type === 'slot') {
+        if (!target.slot) {
+          this.addError('CUE_SLOT_MISSING_NAME', cue.id, 'Slot target must specify slot name');
+        } else if (!shot.slots || !shot.slots[target.slot]) {
+          this.addError('CUE_SLOT_NOT_FOUND', cue.id, `Slot not found in shot: ${target.slot}`);
+        }
+
+        if (target.index !== undefined) {
+          const slotValue = shot.slots?.[target.slot];
+          if (Array.isArray(slotValue) && target.index >= slotValue.length) {
+            this.addError('CUE_ITEM_INDEX_OUT_OF_RANGE', cue.id, `Item index out of range`);
           }
         }
       }

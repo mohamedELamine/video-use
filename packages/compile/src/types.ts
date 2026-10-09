@@ -7,6 +7,8 @@ export interface AlignedWord {
   text: string;
   start: number; // seconds
   end: number;
+  confidence?: number; // 0-1, word alignment confidence
+  phraseConfidence?: number; // 0-1, phrase median confidence
 }
 
 export interface Alignment {
@@ -20,11 +22,18 @@ export interface Anchor {
   wordId: string; // address to aligned word
 }
 
+export interface CueTarget {
+  type: 'slot' | 'element';
+  slot?: string; // slot name if type=slot
+  index?: number; // item index if slot is list
+  element?: string; // element id if type=element
+}
+
 export interface Cue {
   id: string;
   anchorId: string;
   kind: 'reveal' | 'state-change' | 'camera';
-  target: string; // slot or element id
+  target: CueTarget | string; // backward compat: string target
 }
 
 export interface Shot {
@@ -98,6 +107,29 @@ export interface CompiledPlan {
   storyboard: string;
 }
 
+export interface ResolvedCue {
+  id: string;
+  anchorId: string;
+  kind: 'reveal' | 'state-change' | 'camera';
+  target: CueTarget | string;
+  anchorWord: string; // text of anchor word
+  anchorSecond: number; // absolute time of anchor word
+  anchorFrame: number; // frame number of anchor word
+  frameOffset: number; // offset within shot (0 = shot start)
+}
+
+export interface ResolvedAnchor {
+  id: string;
+  role: 'payoff' | 'emphasis';
+  wordId: string;
+  word: string;
+  second: number;
+  frame: number;
+  landed: boolean; // true if lands via cue or cut
+  landingType: 'cut' | 'cue' | 'none';
+  cueId?: string; // if landed via cue
+}
+
 export interface TimelineFrame {
   shot: {
     id: string;
@@ -108,6 +140,8 @@ export interface TimelineFrame {
   startSecond: number;
   endFrame: number;
   endSecond: number;
+  anchors: ResolvedAnchor[]; // anchors this shot lands via cut
+  cues?: ResolvedCue[]; // cues in this shot
 }
 
 export interface IntentDefinition {

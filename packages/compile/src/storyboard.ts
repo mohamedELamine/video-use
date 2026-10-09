@@ -34,9 +34,6 @@ export class StoryboardGenerator {
   }
 
   private formatBeat(beat: any): string {
-    // const startWord = this.getWord(beat.startWordId);
-    // const endWord = this.getWord(beat.endWordId);
-
     const narration = this.getNarration(beat.startWordId, beat.endWordId);
     const startIdx = this.getWordIndex(beat.startWordId);
     const endIdx = this.getWordIndex(beat.endWordId);
@@ -50,6 +47,16 @@ export class StoryboardGenerator {
 
     if (narration) {
       lines.push(`**Narration**: "${narration}"`);
+      lines.push('');
+    }
+
+    // Show anchors in beat
+    if (beat.anchors && beat.anchors.length > 0) {
+      lines.push('**Anchors**:');
+      for (const anchor of beat.anchors) {
+        const word = this.getWord(anchor.wordId);
+        lines.push(`- ${anchor.role}: "${word?.text}" (${anchor.wordId})`);
+      }
       lines.push('');
     }
 
@@ -82,7 +89,8 @@ export class StoryboardGenerator {
     if (shot.cues && shot.cues.length > 0) {
       lines.push(`- **Cues**:`);
       for (const cue of shot.cues) {
-        lines.push(`  - ${cue.kind}: ${cue.target} (anchor: ${cue.anchorId})`);
+        const targetStr = typeof cue.target === 'string' ? cue.target : JSON.stringify(cue.target);
+        lines.push(`  - ${cue.kind}: ${targetStr} (anchor: ${cue.anchorId})`);
       }
     }
 
@@ -103,9 +111,9 @@ export class StoryboardGenerator {
     return words.map(w => w.text).join(' ');
   }
 
-  // private getWord(wordId: string) {
-  //   return this.alignment.words.find(w => w.id === wordId);
-  // }
+  private getWord(wordId: string) {
+    return this.alignment.words.find(w => w.id === wordId);
+  }
 
   private getWordIndex(wordId: string): number {
     return this.alignment.words.findIndex(w => w.id === wordId);
