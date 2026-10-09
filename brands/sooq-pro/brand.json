@@ -1,16 +1,21 @@
 {
   "name": "Sooq Pro",
-  "lang": "ar",
-  "dir": "rtl",
-  "colors": {
-    "bg": "#0d1524",
-    "fg": "#ffffff",
+  "palette": {
+    "primary": "#f97316",
     "accent": "#f97316",
     "on_accent": "#0f1e3d",
-    "roles": {
-      "canvas_light": "#fafafa",
-      "ink": "#0f1e3d",
-      "muted": "#6b7a94"
+    "alt_bg": "#fafafa",
+    "alt_fg": "#0f1e3d",
+    "muted": "#6b7a94"
+  },
+  "roles": {
+    "required": ["accent"],
+    "open": []
+  },
+  "surfaces": {
+    "base": {
+      "bg": "#0d1524",
+      "fg": "#ffffff"
     }
   },
   "fonts": {
@@ -26,5 +31,7 @@
       ]
     }
   },
+  "lang": "ar",
+  "dir": "rtl",
   "motion": { "character": "snappy", "pace": "medium" }
 }

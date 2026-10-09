@@ -53,3 +53,4 @@ export * from './types.js';
 export { Validator } from './validator.js';
 export { Resolver } from './resolver.js';
 export { StoryboardGenerator } from './storyboard.js';
+export { SurfaceResolver } from './surface-resolver.js';

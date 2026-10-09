@@ -198,3 +198,11 @@ export interface Archetype {
   allowRepeat: Record<string, boolean>;
   orderingRules: string[];
 }
+
+export interface ResolvedSurface {
+  name: 'base' | 'alt';
+  bg: string; // hex color
+  fg: string; // hex color
+  fallback?: boolean; // true if alt fell back to base
+  fallbackReason?: string; // why fallback happened
+}

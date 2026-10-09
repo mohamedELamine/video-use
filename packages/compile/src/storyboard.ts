@@ -77,9 +77,11 @@ export class StoryboardGenerator {
       lines.push(`- **Duration**: ${(timelineEntry.endSecond - timelineEntry.startSecond).toFixed(2)}s`);
     }
 
-    if (shot.surface) {
-      lines.push(`- **Surface**: ${shot.surface}`);
-    }
+    // Show surface with colors
+    const surface = shot.surface || 'base';
+    let surfaceStr = surface;
+    // TODO: add resolved colors when resolver integrated
+    lines.push(`- **Surface**: ${surfaceStr}`);
 
     if (shot.intent === 'statement' && shot.slots?.copy) {
       const copy = shot.slots.copy;
