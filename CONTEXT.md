@@ -116,7 +116,15 @@ The system-owned set of intents and the content each one accepts. Like an archet
 A named place an intent defines for the shot planner to fill — a headline, a callout, a list of items, a secondary image. Filled per shot, from the plan. Not a **Role**: a role is resolved from brand identity and is the same across a whole film; a content slot is written for one shot.
 
 Items that share one frame are one slot holding a list; items that each take the whole frame, separated by cuts, are separate shots of the same intent. Line breaks, numbering, and how long text is fitted belong to the renderer, never to a slot.
+
+One exception is deliberate: the `mark` slot of the `brand` intent holds the **brand mark** and is filled from brand identity, never by the planner. The planner may make a cue land on it but may not write it. It is a slot so that a cue can address it in the same way as any other target.
 _Avoid_: Prop, field, variable
+
+**Brand mark**:
+How a product signs its name on screen: its logo, or its name set in the brand's display type when it has no logo. Part of brand identity, the same across every film the product yields. It is **not on-screen copy**, even when it is rendered as text, because nobody chose those words for this film.
+
+A `brand` shot always shows the mark. It is the only intent that carries it. A cue can make the mark land on the word where the name is spoken. A shot that starts on that word needs no cue, because the cut lands it.
+_Avoid_: Logo, wordmark, lockup
 
 **Primary asset**:
 The one asset a shot is *about* — what its camera moves over, its cursor acts on, and its element cues address. A shot has at most one; any other image it carries sits in a content slot. Evidence modes constrain the primary asset, never the intent: a recorded interaction needs a recording, a visual state needs some asset, and a stated or supporting shot needs none.
@@ -128,7 +136,7 @@ Chosen per shot by the shot planner. Alternating surfaces is a directing rhythm:
 _Avoid_: Tone, theme, mode, background, dark/light
 
 **On-screen copy**:
-Every word the viewer reads, spoken or not. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
+Every word the viewer reads, spoken or not, except the **brand mark**. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
 
 **Cue**:
 A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place.
