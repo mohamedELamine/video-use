@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import { strict as assert } from 'node:assert';
 import { execSync } from 'node:child_process';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 test('CLI: compile valid fixture', () => {
@@ -55,7 +55,7 @@ test('CLI: refuse invalid plan', () => {
 
   // Write temporary fixture
   const tmpFile = '/tmp/invalid-fixture.json';
-  require('fs').writeFileSync(tmpFile, JSON.stringify(invalidFixture));
+  writeFileSync(tmpFile, JSON.stringify(invalidFixture));
 
   // Run CLI and expect non-zero exit
   try {
