@@ -5,7 +5,7 @@
 Two rules follow from this, and both will look odd to a reader who expects explicit times:
 
 - **Shots carry only `start_word`.** A shot runs until the next shot starts. The first shot begins at 0. The last shot runs to the end of the voice-over plus `job.output.tail_s`. Silence between phrases (about a third of a typical narration) goes to the shot that precedes it. Where the cut falls inside a gap is resolver policy, not spec data. There is no `end_word` on a shot, because shots tile the timeline and an end address could only repeat or contradict the next shot's start.
-- **Cues are written by the shot planner and timed by their anchor.** Every cue names exactly one anchor, takes that anchor's word as its moment, and adds only a `target` and a `kind` (`reveal | state_change | camera`). Every anchor must cause at least one cue in a shot of its own beat. Choreography that no anchor causes, such as entrances and staggers, belongs to the renderer.
+- **Cues are written by the shot planner and timed by their anchor.** Every cue names exactly one anchor, takes that anchor's word as its moment, and adds only a `target` and a `kind` (`reveal | state_change | camera`). Every anchor must land in a shot of its own beat: either it causes at least one cue there, or one of those shots has the anchor's word as its `start_word`, so the cut lands it. A cue on an anchor that a cut already lands is allowed but redundant. Choreography that no anchor causes, such as entrances and staggers, belongs to the renderer.
 
 ## Considered options
 
@@ -14,3 +14,5 @@ Two rules follow from this, and both will look odd to a reader who expects expli
 - **Word id plus cached seconds.** Rejected as two sources of truth.
 
 Reconciled in [Reconcile the spec contract with map #18](https://github.com/mohamedELamine/video-use/issues/28).
+
+**Amended** after [Make the Remotion composition spec-driven](https://github.com/mohamedELamine/video-use/issues/11): a cut satisfies an anchor. The original rule ("every anchor must cause at least one cue") forced a redundant reveal on every shot that starts on its anchor's word, such as the five module cards whose names land as cuts.

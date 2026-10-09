@@ -49,7 +49,9 @@ The distinction from aligned word ids is deliberate: a word id is anchored in th
 The vocabulary a planner uses to describe a beat's purpose — `HOOK`, `PROBLEM`, `REVEAL`, `POSITIONING`, `PIVOT`, `CAPABILITY`, `DIFFERENTIATION`, `PAYOFF`, `ATTRIBUTION`, `CTA`. A palette, not a sequence, and not the thing an archetype requires.
 
 **Narrative obligation**:
-Something a directing strategy must accomplish — capture attention early, establish what the product is, communicate meaningful value, resolve the opening promise. What an archetype actually requires. Obligations are deliberately *not* beat kinds: a film may open on the reveal and let it serve as the hook, so requiring a literal `HOOK` beat would reject a valid launch. Beat kinds are the vocabulary; obligations are the contract.
+Something a directing strategy must accomplish — capture attention early, establish what the product is, communicate meaningful value, resolve the opening promise, drive to action. What an archetype actually requires. Obligations are deliberately *not* beat kinds: a film may open on the reveal and let it serve as the hook, so requiring a literal `HOOK` beat would reject a valid launch. Beat kinds are the vocabulary; obligations are the contract.
+
+A beat **claims** the obligations it serves, and an archetype is satisfied when every one of its obligations is claimed. Ordering is expressed through claims, never through kinds: an obligation that is positional, such as capturing attention *early*, must be claimed by the beat in that position.
 
 **Shot**:
 A unit of visual *execution*: one continuous stretch of screen time in the spec, carrying its own cues. Owned by the shot planner. Belongs to exactly one beat.
@@ -93,7 +95,7 @@ A semantic timing decision inside a beat: a moment something must land on, addre
 - **payoff** — the moment the beat's purpose lands. Zero or one per beat; a beat that merely sets up a problem has none.
 - **emphasis** — a secondary moment that should land without the beat resolving. Zero or many.
 
-Five feature cards under one beat are five emphasis anchors, not five payoffs. Anchors are chosen upstream, where meaning lives, and each becomes an executable cue downstream — the cue keeps a reference to the anchor that caused it, so the lineage from narrative decision to rendered frame stays traceable.
+Five feature cards under one beat are five emphasis anchors, not five payoffs. Anchors are chosen upstream, where meaning lives, and every anchor must land. It lands in one of two ways. A **cut** lands it when a shot of its own beat starts on the anchor's word. Otherwise it becomes an executable cue downstream, and the cue keeps a reference to the anchor that caused it, so the lineage from narrative decision to rendered frame stays traceable. The five feature cards land by their cuts.
 _Avoid_: Highlight, hit, sync point, marker
 
 **Capability**:
@@ -139,7 +141,7 @@ _Avoid_: Tone, theme, mode, background, dark/light
 Every word the viewer reads, spoken or not, except the **brand mark**. Written by the shot planner and carried in the plan, because choosing it is a creative decision; a renderer never writes copy, and never chooses or orders what product knowledge to show.
 
 **Cue**:
-A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place.
+A timed event *inside* a shot that makes one anchor land on one target — the price inside a recording, a callout, a camera move — so intra-shot payoff timing is directable. Written by the shot planner, because choosing *what* lands on the anchor's word is a creative decision no renderer may guess. Every cue is caused by exactly one anchor and carries no time of its own: it is timed by its anchor's word, so the moment lives in one place. An anchor needs no cue when a shot of its beat starts on its word, because the cut already lands it; a cue there is allowed but redundant.
 
 A cue lands on either a **content slot** or an element of the shot's **primary asset**. What it may do follows from which: a slot can only be revealed, while an element can be revealed, change state, or be moved to by the camera. The set of cue kinds belongs to the intent vocabulary, so a new kind is a vocabulary entry, not a change to the plan's shape.
 
