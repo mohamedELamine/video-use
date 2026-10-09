@@ -1,0 +1,19 @@
+{
+  "name": "@video-use/cli",
+  "version": "0.1.0",
+  "description": "CLI for video spec compilation and rendering",
+  "type": "module",
+  "bin": {
+    "video-use": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test dist/**/*.test.js"
+  },
+  "dependencies": {
+    "@video-use/compile": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

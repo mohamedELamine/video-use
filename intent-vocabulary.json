@@ -1,0 +1,145 @@
+{
+  "version": "1.0.0",
+  "intents": [
+    {
+      "id": "statement",
+      "name": "Statement",
+      "description": "Narrated assertion shown as on-screen text or callout",
+      "slots": [
+        {
+          "id": "copy",
+          "type": "string | run[]",
+          "required": true,
+          "source": "plan"
+        }
+      ],
+      "primaryAssetRule": "none",
+      "evidenceModes": ["stated", "supporting"]
+    },
+    {
+      "id": "product-shot",
+      "name": "Product Shot",
+      "description": "Recorded interaction or visual state of a capability",
+      "slots": [
+        {
+          "id": "heading",
+          "type": "string",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "callout",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
+        }
+      ],
+      "primaryAssetRule": "required",
+      "evidenceModes": ["recorded", "visual-state"]
+    },
+    {
+      "id": "list",
+      "name": "List",
+      "description": "Enumeration of features or items",
+      "slots": [
+        {
+          "id": "heading",
+          "type": "string",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "items",
+          "type": "string[]",
+          "required": true,
+          "source": "plan"
+        }
+      ],
+      "primaryAssetRule": "none",
+      "evidenceModes": ["stated"]
+    },
+    {
+      "id": "feature",
+      "name": "Feature",
+      "description": "Highlighted product feature or capability",
+      "slots": [
+        {
+          "id": "name",
+          "type": "string",
+          "required": true,
+          "source": "plan"
+        },
+        {
+          "id": "description",
+          "type": "string",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "icon",
+          "type": "string",
+          "required": false,
+          "source": "plan"
+        }
+      ],
+      "primaryAssetRule": "none",
+      "evidenceModes": ["stated"]
+    },
+    {
+      "id": "stat",
+      "name": "Stat",
+      "description": "Numeric claim or metric",
+      "slots": [
+        {
+          "id": "value",
+          "type": "string",
+          "required": true,
+          "source": "plan"
+        },
+        {
+          "id": "label",
+          "type": "string",
+          "required": false,
+          "source": "plan"
+        }
+      ],
+      "primaryAssetRule": "none",
+      "evidenceModes": ["stated"]
+    },
+    {
+      "id": "brand",
+      "name": "Brand",
+      "description": "Product brand mark on a surface",
+      "slots": [
+        {
+          "id": "mark",
+          "type": "string",
+          "required": true,
+          "source": "brand"
+        }
+      ],
+      "primaryAssetRule": "none",
+      "evidenceModes": ["stated"]
+    }
+  ],
+  "cueKinds": [
+    {
+      "id": "reveal",
+      "name": "Reveal",
+      "description": "Make an element visible",
+      "targetTypes": ["content-slot", "primary-asset-element"]
+    },
+    {
+      "id": "state-change",
+      "name": "State Change",
+      "description": "Change the state of an element",
+      "targetTypes": ["primary-asset-element"]
+    },
+    {
+      "id": "camera",
+      "name": "Camera",
+      "description": "Move the camera to focus on an element",
+      "targetTypes": ["primary-asset-element"]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "video-use",
+  "version": "0.1.0",
+  "description": "AI product-video director",
+  "type": "module",
+  "workspaces": [
+    "packages/compile",
+    "packages/cli",
+    "packages/renderer"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "test": "npm test -ws",
+    "test:compile": "npm test --workspace=packages/compile",
+    "test:cli": "npm test --workspace=packages/cli",
+    "test:renderer": "npm test --workspace=packages/renderer"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.4.0"
+  }
+}

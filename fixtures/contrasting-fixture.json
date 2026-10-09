@@ -1,0 +1,184 @@
+{
+  "product": {
+    "name": "Simple SaaS",
+    "brand": {
+      "name": "Simple",
+      "palette": {
+        "primary": "#0066FF",
+        "secondary": "#FF6600"
+      },
+      "roles": {
+        "required": ["accent"],
+        "open": []
+      },
+      "surfaces": {
+        "base": {
+          "bg": "#FFFFFF",
+          "fg": "#000000"
+        }
+      }
+    },
+    "knowledge": {
+      "name": "Simple SaaS",
+      "capabilities": [
+        {
+          "id": "automation",
+          "name": "Automation",
+          "description": "Automate your workflows",
+          "evidenceModes": ["recorded"]
+        },
+        {
+          "id": "integration",
+          "name": "Integration",
+          "description": "Integrate with popular tools",
+          "evidenceModes": ["visual-state"]
+        },
+        {
+          "id": "analytics",
+          "name": "Analytics",
+          "description": "Track your metrics",
+          "evidenceModes": ["stated"]
+        }
+      ]
+    }
+  },
+  "plan": {
+    "id": "simple-launch",
+    "version": "1.0.0",
+    "archetype": "launch",
+    "beats": [
+      {
+        "id": "hook",
+        "kind": "HOOK",
+        "startWordId": "w1",
+        "endWordId": "w5",
+        "shots": [
+          {
+            "id": "hook-statement",
+            "beatId": "hook",
+            "startWordId": "w1",
+            "intent": "statement",
+            "surface": "base",
+            "slots": {
+              "copy": "Stop wasting time on repetitive tasks"
+            }
+          }
+        ],
+        "anchors": [
+          {
+            "id": "hook-payoff",
+            "role": "payoff",
+            "wordId": "w3"
+          }
+        ]
+      },
+      {
+        "id": "capability-1",
+        "kind": "CAPABILITY",
+        "startWordId": "w6",
+        "endWordId": "w10",
+        "shots": [
+          {
+            "id": "automation-shot",
+            "beatId": "capability-1",
+            "startWordId": "w6",
+            "intent": "statement",
+            "surface": "base",
+            "slots": {
+              "copy": "Automate your workflows instantly"
+            }
+          }
+        ],
+        "anchors": [
+          {
+            "id": "auto-payoff",
+            "role": "payoff",
+            "wordId": "w8"
+          }
+        ]
+      },
+      {
+        "id": "capability-2",
+        "kind": "CAPABILITY",
+        "startWordId": "w11",
+        "endWordId": "w15",
+        "shots": [
+          {
+            "id": "integration-shot",
+            "beatId": "capability-2",
+            "startWordId": "w11",
+            "intent": "statement",
+            "surface": "base",
+            "slots": {
+              "copy": "Integrate with your favorite tools"
+            }
+          }
+        ],
+        "anchors": [
+          {
+            "id": "integration-payoff",
+            "role": "payoff",
+            "wordId": "w13"
+          }
+        ]
+      },
+      {
+        "id": "cta",
+        "kind": "CTA",
+        "startWordId": "w16",
+        "endWordId": "w18",
+        "shots": [
+          {
+            "id": "cta-statement",
+            "beatId": "cta",
+            "startWordId": "w16",
+            "intent": "statement",
+            "surface": "base",
+            "slots": {
+              "copy": "Start your free trial today"
+            }
+          }
+        ],
+        "anchors": [
+          {
+            "id": "cta-payoff",
+            "role": "payoff",
+            "wordId": "w17"
+          }
+        ]
+      }
+    ]
+  },
+  "alignment": {
+    "words": [
+      {"id": "w1", "text": "Stop", "start": 0, "end": 0.3},
+      {"id": "w2", "text": "wasting", "start": 0.3, "end": 0.6},
+      {"id": "w3", "text": "time", "start": 0.6, "end": 0.9},
+      {"id": "w4", "text": "on", "start": 0.9, "end": 1.1},
+      {"id": "w5", "text": "repetitive", "start": 1.1, "end": 1.4},
+      {"id": "w6", "text": "tasks", "start": 1.4, "end": 1.8},
+      {"id": "w7", "text": "Automate", "start": 2.0, "end": 2.3},
+      {"id": "w8", "text": "your", "start": 2.3, "end": 2.6},
+      {"id": "w9", "text": "workflows", "start": 2.6, "end": 3.0},
+      {"id": "w10", "text": "instantly", "start": 3.0, "end": 3.3},
+      {"id": "w11", "text": "Integrate", "start": 3.5, "end": 3.9},
+      {"id": "w12", "text": "with", "start": 3.9, "end": 4.1},
+      {"id": "w13", "text": "your", "start": 4.1, "end": 4.4},
+      {"id": "w14", "text": "favorite", "start": 4.4, "end": 4.7},
+      {"id": "w15", "text": "tools", "start": 4.7, "end": 5.0},
+      {"id": "w16", "text": "Start", "start": 5.5, "end": 5.8},
+      {"id": "w17", "text": "your", "start": 5.8, "end": 6.1},
+      {"id": "w18", "text": "free", "start": 6.1, "end": 6.4},
+      {"id": "w19", "text": "trial", "start": 6.4, "end": 6.7},
+      {"id": "w20", "text": "today", "start": 6.7, "end": 7.0}
+    ],
+    "duration": 7.0
+  },
+  "archetype": "launch",
+  "output": {
+    "tailS": 1.0,
+    "fps": 30,
+    "width": 1080,
+    "height": 1920
+  }
+}
