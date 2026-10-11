@@ -144,7 +144,7 @@
         {
           "id": "mark",
           "type": "string",
-          "required": true,
+          "required": false,
           "source": "brand"
         },
         {

@@ -2,34 +2,22 @@
   "name": "Sooq Pro",
   "capabilities": [
     {
-      "id": "discounts",
-      "name": "Discounts",
-      "description": "Manage and promote discounts and coupons",
-      "evidenceModes": ["recorded", "visual-state", "stated"]
+      "id": "sales-journey",
+      "name": "Complete Sales Journey",
+      "description": "Designed for the full sales journey: first visit, purchase decision, completed order, returning customer",
+      "evidence_modes": ["stated", "supporting"]
     },
     {
-      "id": "loyalty",
-      "name": "Loyalty Program",
-      "description": "Reward customer loyalty",
-      "evidenceModes": ["recorded", "visual-state", "stated"]
+      "id": "quick-order",
+      "name": "Quick Order",
+      "description": "Fast checkout directly from product page, without complexity",
+      "evidence_modes": ["visual-state", "recorded-interaction"]
     },
     {
-      "id": "engagement",
-      "name": "Customer Engagement",
-      "description": "Engage customers via WhatsApp and push notifications",
-      "evidenceModes": ["recorded", "visual-state", "stated"]
-    },
-    {
-      "id": "gamification",
-      "name": "Gamification",
-      "description": "Motivate customers with gamified experiences",
-      "evidenceModes": ["recorded", "visual-state", "stated"]
-    },
-    {
-      "id": "wishlist",
-      "name": "Wishlist",
-      "description": "Let customers save items for later",
-      "evidenceModes": ["recorded", "visual-state", "stated"]
+      "id": "retention-modules",
+      "name": "Customer Retention System",
+      "description": "19 sales and marketing modules: loyalty points, spin wheel, coupons, WhatsApp, wishlist, and more",
+      "evidence_modes": ["stated", "supporting"]
     }
   ]
 }
