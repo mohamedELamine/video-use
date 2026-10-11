@@ -52,6 +52,7 @@
         "kind": "HOOK",
         "startWordId": "w1",
         "endWordId": "w5",
+        "claimedObligations": ["capture-attention"],
         "shots": [
           {
             "id": "hook-statement",
@@ -60,7 +61,7 @@
             "intent": "statement",
             "surface": "base",
             "slots": {
-              "copy": "Stop wasting time on repetitive tasks"
+              "headline": "Stop wasting time on repetitive tasks"
             }
           }
         ],
@@ -77,15 +78,19 @@
         "kind": "CAPABILITY",
         "startWordId": "w6",
         "endWordId": "w10",
+        "claimedObligations": ["communicate-value"],
+        "promotions": [{"capabilityId": "automation", "groundingPhrase": "Automate your workflows"}],
         "shots": [
           {
             "id": "automation-shot",
             "beatId": "capability-1",
             "startWordId": "w8",
-            "intent": "statement",
+            "intent": "feature",
             "surface": "base",
+            "capabilityId": "automation",
             "slots": {
-              "copy": "Automate your workflows instantly"
+              "headline": "Automation",
+              "body": "Automate your workflows instantly"
             }
           }
         ],
@@ -102,15 +107,19 @@
         "kind": "CAPABILITY",
         "startWordId": "w11",
         "endWordId": "w15",
+        "claimedObligations": ["communicate-value"],
+        "promotions": [{"capabilityId": "integration", "groundingPhrase": "Integrate with"}],
         "shots": [
           {
             "id": "integration-shot",
             "beatId": "capability-2",
             "startWordId": "w13",
-            "intent": "statement",
+            "intent": "feature",
             "surface": "base",
+            "capabilityId": "integration",
             "slots": {
-              "copy": "Integrate with your favorite tools"
+              "headline": "Integration",
+              "body": "Integrate with your favorite tools"
             }
           }
         ],
@@ -126,16 +135,18 @@
         "id": "cta",
         "kind": "CTA",
         "startWordId": "w16",
-        "endWordId": "w18",
+        "endWordId": "w20",
+        "claimedObligations": ["drive-action"],
         "shots": [
           {
             "id": "cta-statement",
             "beatId": "cta",
             "startWordId": "w17",
-            "intent": "statement",
+            "intent": "stat",
             "surface": "base",
             "slots": {
-              "copy": "Start your free trial today"
+              "value": "30 days free",
+              "headline": "Start your trial today"
             }
           }
         ],

@@ -4,16 +4,34 @@
     {
       "id": "statement",
       "name": "Statement",
-      "description": "Narrated assertion shown as on-screen text or callout",
+      "description": "Narrated assertion shown as on-screen text",
       "slots": [
         {
-          "id": "copy",
+          "id": "headline",
           "type": "string | run[]",
           "required": true,
           "source": "plan"
+        },
+        {
+          "id": "kicker",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "body",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "footnote",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
         }
       ],
-      "primaryAssetRule": "none",
+      "primaryAssetRule": "forbidden",
       "evidenceModes": ["stated", "supporting"]
     },
     {
@@ -22,8 +40,8 @@
       "description": "Recorded interaction or visual state of a capability",
       "slots": [
         {
-          "id": "heading",
-          "type": "string",
+          "id": "headline",
+          "type": "string | run[]",
           "required": false,
           "source": "plan"
         },
@@ -35,75 +53,87 @@
         }
       ],
       "primaryAssetRule": "required",
-      "evidenceModes": ["recorded", "visual-state"]
+      "evidenceModes": ["recorded-interaction", "visual-state"]
     },
     {
       "id": "list",
       "name": "List",
-      "description": "Enumeration of features or items",
+      "description": "Enumeration of features or items, staggered or in columns",
       "slots": [
         {
-          "id": "heading",
-          "type": "string",
-          "required": false,
+          "id": "headline",
+          "type": "string | run[]",
+          "required": true,
           "source": "plan"
         },
         {
           "id": "items",
-          "type": "string[]",
+          "type": "listItem[]",
           "required": true,
           "source": "plan"
         }
       ],
-      "primaryAssetRule": "none",
+      "primaryAssetRule": "forbidden",
       "evidenceModes": ["stated"]
     },
     {
       "id": "feature",
       "name": "Feature",
-      "description": "Highlighted product feature or capability",
+      "description": "Highlighted product feature with icon and description",
       "slots": [
         {
-          "id": "name",
-          "type": "string",
+          "id": "headline",
+          "type": "string | run[]",
           "required": true,
           "source": "plan"
         },
         {
-          "id": "description",
-          "type": "string",
+          "id": "kicker",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "body",
+          "type": "string | run[]",
           "required": false,
           "source": "plan"
         },
         {
           "id": "icon",
-          "type": "string",
+          "type": "asset",
           "required": false,
           "source": "plan"
         }
       ],
-      "primaryAssetRule": "none",
+      "primaryAssetRule": "forbidden",
       "evidenceModes": ["stated"]
     },
     {
       "id": "stat",
       "name": "Stat",
-      "description": "Numeric claim or metric",
+      "description": "Numeric claim or metric with headline and supporting text",
       "slots": [
         {
           "id": "value",
-          "type": "string",
+          "type": "string | run[]",
           "required": true,
           "source": "plan"
         },
         {
-          "id": "label",
-          "type": "string",
+          "id": "headline",
+          "type": "string | run[]",
+          "required": true,
+          "source": "plan"
+        },
+        {
+          "id": "body",
+          "type": "string | run[]",
           "required": false,
           "source": "plan"
         }
       ],
-      "primaryAssetRule": "none",
+      "primaryAssetRule": "forbidden",
       "evidenceModes": ["stated"]
     },
     {
@@ -116,9 +146,27 @@
           "type": "string",
           "required": true,
           "source": "brand"
+        },
+        {
+          "id": "headline",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "visual",
+          "type": "asset",
+          "required": false,
+          "source": "plan"
+        },
+        {
+          "id": "cta",
+          "type": "string | run[]",
+          "required": false,
+          "source": "plan"
         }
       ],
-      "primaryAssetRule": "none",
+      "primaryAssetRule": "forbidden",
       "evidenceModes": ["stated"]
     }
   ],

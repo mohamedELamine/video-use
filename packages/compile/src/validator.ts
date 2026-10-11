@@ -158,6 +158,7 @@ export class Validator {
             this.addError('SHOT_UNKNOWN_INTENT', shot.id, `Intent not in vocabulary: ${shot.intent}`);
           } else {
             this.validateShotSlots(shot, intentDef);
+            this.validatePrimaryAsset(shot, intentDef);
           }
         }
 
@@ -180,6 +181,19 @@ export class Validator {
       if (slotValue !== undefined && slotDef.type === 'string' && typeof slotValue !== 'string') {
         this.addError('SHOT_SLOT_TYPE_ERROR', shot.id, `Slot ${slotDef.id} must be string, got ${typeof slotValue}`);
       }
+    }
+  }
+
+  private validatePrimaryAsset(shot: Shot, intentDef: any): void {
+    const rule = intentDef.primaryAssetRule;
+    const hasAsset = !!shot.primaryAsset;
+
+    if (rule === 'required' && !hasAsset) {
+      this.addError('SHOT_MISSING_PRIMARY_ASSET', shot.id, `Intent '${shot.intent}' requires a primary asset`);
+    }
+
+    if (rule === 'forbidden' && hasAsset) {
+      this.addError('SHOT_FORBIDDEN_PRIMARY_ASSET', shot.id, `Intent '${shot.intent}' cannot have a primary asset`);
     }
   }
 

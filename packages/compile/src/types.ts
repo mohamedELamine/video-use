@@ -164,7 +164,7 @@ export interface IntentDefinition {
     required: boolean;
     source: 'plan' | 'brand';
   }>;
-  primaryAssetRule: 'required' | 'optional' | 'none';
+  primaryAssetRule: 'required' | 'optional' | 'none' | 'forbidden';
   evidenceModes: string[];
 }
 
