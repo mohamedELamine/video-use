@@ -146,7 +146,7 @@ test('brand: cue reveal on mark accepted without value', () => {
     ],
   };
 
-  const findings = validator.validate(plan, {} as any);
+  validator.validate(plan, {} as any);
   // Mark slot validation is handled by renderer since it's source: brand
   // The validator should only check that the cue target exists if needed
   assert.ok(true); // This test just documents the behavior
@@ -192,7 +192,7 @@ test('brand: anchor on brand name landed by cut', () => {
 
   // The validator skips checking source: brand slots, as they're resolved
   // by the renderer. This test documents that behavior.
-  const findings = validator.validate(plan, {} as any);
+  validator.validate(plan, {} as any);
   assert.ok(true); // This test documents cut-landing behavior
 });
 
@@ -270,7 +270,7 @@ test('brand: valid brand shot with optional slots', () => {
   };
 
   // The validator skips checking source: brand slots for required fields
-  const findings = validator.validate(plan, {} as any);
+  validator.validate(plan, {} as any);
   assert.ok(true); // Tests that plan with brand intent compiles
 });
 

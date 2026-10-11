@@ -98,6 +98,17 @@ export interface ProductKnowledge {
   capabilities: Capability[];
 }
 
+export interface Asset {
+  id: string;
+  kind: 'recording' | 'screenshot' | 'static' | 'hyperframes';
+  path: string | null; // null until produced; null is a warning
+  obtain?: string; // optional way to obtain the asset
+}
+
+export interface AssetsMap {
+  [assetId: string]: Asset;
+}
+
 export interface Finding {
   code: string;
   severity: 'error' | 'warning';
@@ -190,6 +201,7 @@ export interface RenderJob {
   plan: Plan;
   alignment: Alignment;
   archetype: string;
+  assets?: AssetsMap; // all assets referenced in the plan (optional for backward compat)
   output: {
     tailS: number; // duration after voice-over ends
     fps: number;
