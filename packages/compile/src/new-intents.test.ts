@@ -176,7 +176,7 @@ test('intents: list with empty items array', () => {
     ],
   };
 
-  const findings = validator.validate(plan, {} as any);
+  validator.validate(plan, {} as any);
   // Empty items list should ideally be a warning, but for now just compile
   assert.ok(true);
 });

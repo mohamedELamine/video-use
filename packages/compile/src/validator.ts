@@ -182,6 +182,11 @@ export class Validator {
         this.addError('SHOT_SLOT_TYPE_ERROR', shot.id, `Slot ${slotDef.id} must be string, got ${typeof slotValue}`);
       }
     }
+
+    // Special check for brand intent: mark must not be in content
+    if (shot.intent === 'brand' && shot.slots?.['mark'] !== undefined) {
+      this.addError('SHOT_MARK_IN_CONTENT', shot.id, 'Brand mark must not be written in content; it comes from brand identity');
+    }
   }
 
   private validatePrimaryAsset(shot: Shot, intentDef: any): void {
