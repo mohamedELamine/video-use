@@ -45,16 +45,24 @@ export interface Shot {
   slots: Record<string, unknown>; // intent-specific content
   cues?: Cue[];
   primaryAsset?: string; // path to asset file
+  capabilityId?: string; // capability this shot is evidence for (product-shot intent only)
+  evidenceMode?: string; // 'recorded' | 'visual-state' | 'stated'
+}
+
+export interface Promotion {
+  capabilityId: string;
+  groundingPhrase: string; // must be within beat's word range
 }
 
 export interface Beat {
   id: string;
-  kind: string; // e.g. 'HOOK', 'PROBLEM', etc.
+  kind: string; // e.g. 'HOOK', 'PROBLEM', 'CAPABILITY', 'REVEAL', etc.
   startWordId: string;
   endWordId: string;
   shots: Shot[];
   anchors: Anchor[];
   claimedObligations?: string[]; // obligation ids this beat claims
+  promotions?: Promotion[]; // capabilities promoted in this beat
 }
 
 export interface Plan {
@@ -78,14 +86,16 @@ export interface BrandIdentity {
   };
 }
 
+export interface Capability {
+  id: string;
+  name: string;
+  description: string;
+  evidenceModes: string[]; // 'recorded', 'visual-state', 'stated', etc.
+}
+
 export interface ProductKnowledge {
   name: string;
-  capabilities: Array<{
-    id: string;
-    name: string;
-    description: string;
-    evidenceModes: string[];
-  }>;
+  capabilities: Capability[];
 }
 
 export interface Finding {
@@ -188,15 +198,23 @@ export interface RenderJob {
   };
 }
 
+export interface ArchetypeObligation {
+  id: string; // e.g. 'capture-attention', 'establish-product'
+  description: string;
+  positional?: boolean; // true if order matters (e.g., 'capture-attention' must be first)
+  repeatable?: boolean; // can beat kind repeat
+}
+
 export interface Archetype {
-  id: string;
-  obligations: Array<{
-    id: string;
-    description: string;
-    positional?: boolean; // true if order matters (e.g., 'early')
-  }>;
-  allowRepeat: Record<string, boolean>;
-  orderingRules: string[];
+  id: string; // e.g. 'launch'
+  obligations: ArchetypeObligation[];
+}
+
+export interface GroundingResult {
+  capabilityId: string;
+  state: 'grounded' | 'unresolved' | 'contradicted';
+  capabilityName?: string;
+  reason?: string;
 }
 
 export interface ResolvedSurface {

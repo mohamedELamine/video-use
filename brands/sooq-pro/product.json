@@ -1,0 +1,35 @@
+{
+  "name": "Sooq Pro",
+  "capabilities": [
+    {
+      "id": "discounts",
+      "name": "Discounts",
+      "description": "Manage and promote discounts and coupons",
+      "evidenceModes": ["recorded", "visual-state", "stated"]
+    },
+    {
+      "id": "loyalty",
+      "name": "Loyalty Program",
+      "description": "Reward customer loyalty",
+      "evidenceModes": ["recorded", "visual-state", "stated"]
+    },
+    {
+      "id": "engagement",
+      "name": "Customer Engagement",
+      "description": "Engage customers via WhatsApp and push notifications",
+      "evidenceModes": ["recorded", "visual-state", "stated"]
+    },
+    {
+      "id": "gamification",
+      "name": "Gamification",
+      "description": "Motivate customers with gamified experiences",
+      "evidenceModes": ["recorded", "visual-state", "stated"]
+    },
+    {
+      "id": "wishlist",
+      "name": "Wishlist",
+      "description": "Let customers save items for later",
+      "evidenceModes": ["recorded", "visual-state", "stated"]
+    }
+  ]
+}

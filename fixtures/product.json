@@ -1,0 +1,23 @@
+{
+  "name": "Simple SaaS",
+  "capabilities": [
+    {
+      "id": "automation",
+      "name": "Automation",
+      "description": "Automate your workflows",
+      "evidenceModes": ["recorded", "stated"]
+    },
+    {
+      "id": "integration",
+      "name": "Integration",
+      "description": "Integrate with popular tools",
+      "evidenceModes": ["visual-state", "stated"]
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "description": "Track your metrics",
+      "evidenceModes": ["stated"]
+    }
+  ]
+}
