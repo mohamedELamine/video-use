@@ -84,6 +84,14 @@ export interface BrandIdentity {
     base: { bg: string; fg: string };
     alt?: { bg: string; fg: string };
   };
+  fonts?: {
+    body?: { family: string; faces?: any[] };
+    display?: { family: string; faces?: any[] };
+  };
+  dir?: 'ltr' | 'rtl';
+  lang?: string;
+  logo?: string; // path to logo file
+  motion?: { character?: string; pace?: string };
 }
 
 export interface Capability {
@@ -152,11 +160,7 @@ export interface ResolvedAnchor {
 }
 
 export interface TimelineFrame {
-  shot: {
-    id: string;
-    beatId: string;
-    intent: string;
-  };
+  shot: Shot; // Full shot object for rendering
   startFrame: number;
   startSecond: number;
   endFrame: number;

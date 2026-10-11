@@ -82,11 +82,7 @@ export class Resolver {
       const cuesResolved = this.resolveCuesInShot(shot, startFrame, startSecond);
 
       frames.push({
-        shot: {
-          id: shot.id,
-          beatId: shot.beatId,
-          intent: shot.intent,
-        },
+        shot: shot, // Include full shot object for rendering
         startFrame,
         startSecond,
         endFrame,

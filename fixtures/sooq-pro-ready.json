@@ -1,0 +1,1228 @@
+{
+  "product": {
+    "name": "Sooq Pro",
+    "brand": {
+      "name": "Sooq Pro",
+      "palette": {
+        "primary": "#f97316",
+        "accent": "#f97316",
+        "on_accent": "#0f1e3d",
+        "alt_bg": "#fafafa",
+        "alt_fg": "#0f1e3d",
+        "muted": "#6b7a94"
+      },
+      "roles": {
+        "required": [
+          "accent"
+        ],
+        "open": []
+      },
+      "surfaces": {
+        "base": {
+          "bg": "#0d1524",
+          "fg": "#ffffff"
+        }
+      },
+      "fonts": {
+        "body": {
+          "family": "Cairo",
+          "faces": [
+            {
+              "file": "fonts/Cairo-Bold.ttf",
+              "weight": 700
+            }
+          ]
+        },
+        "display": {
+          "family": "Cairo",
+          "faces": [
+            {
+              "file": "fonts/Cairo-ExtraBold.ttf",
+              "weight": 800
+            },
+            {
+              "file": "fonts/Cairo-Black.ttf",
+              "weight": 900
+            }
+          ]
+        }
+      },
+      "lang": "ar",
+      "dir": "rtl",
+      "motion": {
+        "character": "snappy",
+        "pace": "medium"
+      }
+    },
+    "knowledge": {
+      "name": "Sooq Pro",
+      "capabilities": [
+        {
+          "id": "sales-journey",
+          "name": "Complete Sales Journey",
+          "description": "Designed for the full sales journey: first visit, purchase decision, completed order, returning customer",
+          "evidence_modes": [
+            "stated",
+            "supporting"
+          ]
+        },
+        {
+          "id": "quick-order",
+          "name": "Quick Order",
+          "description": "Fast checkout directly from product page, without complexity",
+          "evidence_modes": [
+            "visual-state",
+            "recorded-interaction"
+          ]
+        },
+        {
+          "id": "retention-modules",
+          "name": "Customer Retention System",
+          "description": "19 sales and marketing modules: loyalty points, spin wheel, coupons, WhatsApp, wishlist, and more",
+          "evidence_modes": [
+            "stated",
+            "supporting"
+          ]
+        }
+      ]
+    }
+  },
+  "plan": {
+    "id": "sooq-pro-launch-reel",
+    "archetype": "launch",
+    "beats": [
+      {
+        "id": "b01",
+        "kind": "HOOK",
+        "start_word": "p01.w01",
+        "end_word": "p02.w06",
+        "obligations": [
+          "capture-attention"
+        ],
+        "anchors": [
+          {
+            "id": "a-b01-turn",
+            "role": "emphasis",
+            "word": "p02.w01"
+          }
+        ],
+        "promotions": []
+      },
+      {
+        "id": "b02",
+        "kind": "PIVOT",
+        "start_word": "p03.w01",
+        "end_word": "p03.w02",
+        "obligations": [],
+        "anchors": [],
+        "promotions": []
+      },
+      {
+        "id": "b03",
+        "kind": "REVEAL",
+        "start_word": "p04.w01",
+        "end_word": "p05.w15",
+        "obligations": [
+          "establish-product"
+        ],
+        "anchors": [
+          {
+            "id": "a-b03-mark",
+            "role": "payoff",
+            "word": "p04.w03"
+          }
+        ],
+        "promotions": [
+          {
+            "capability_id": "sales-journey",
+            "grounding_phrase": "مصمم لرحلة البيع كاملة"
+          }
+        ]
+      },
+      {
+        "id": "b04",
+        "kind": "CAPABILITY",
+        "start_word": "p06.w01",
+        "end_word": "p11.w01",
+        "obligations": [
+          "communicate-value"
+        ],
+        "anchors": [
+          {
+            "id": "a-b04-shipping",
+            "role": "emphasis",
+            "word": "p09.w01"
+          },
+          {
+            "id": "a-b04-confirm",
+            "role": "emphasis",
+            "word": "p10.w04"
+          },
+          {
+            "id": "a-b04-payoff",
+            "role": "payoff",
+            "word": "p11.w01"
+          }
+        ],
+        "promotions": [
+          {
+            "capability_id": "quick-order",
+            "grounding_phrase": "طلب سريع"
+          }
+        ]
+      },
+      {
+        "id": "b05",
+        "kind": "CAPABILITY",
+        "start_word": "p12.w01",
+        "end_word": "p19.w06",
+        "obligations": [
+          "communicate-value"
+        ],
+        "anchors": [
+          {
+            "id": "a-b05-loyalty",
+            "role": "emphasis",
+            "word": "p13.w01"
+          },
+          {
+            "id": "a-b05-wheel",
+            "role": "emphasis",
+            "word": "p14.w01"
+          },
+          {
+            "id": "a-b05-coupons",
+            "role": "emphasis",
+            "word": "p15.w01"
+          },
+          {
+            "id": "a-b05-whatsapp",
+            "role": "emphasis",
+            "word": "p16.w01"
+          },
+          {
+            "id": "a-b05-wishlist",
+            "role": "emphasis",
+            "word": "p17.w01"
+          },
+          {
+            "id": "a-b05-payoff",
+            "role": "payoff",
+            "word": "p18.w01"
+          }
+        ],
+        "promotions": [
+          {
+            "capability_id": "retention-modules",
+            "grounding_phrase": "منظومة تحفظ العميل"
+          }
+        ]
+      },
+      {
+        "id": "b06",
+        "kind": "PAYOFF",
+        "start_word": "p20.w01",
+        "end_word": "p22.w04",
+        "obligations": [
+          "resolve-promise"
+        ],
+        "anchors": [
+          {
+            "id": "a-b06-mark",
+            "role": "payoff",
+            "word": "p20.w01"
+          }
+        ],
+        "promotions": []
+      },
+      {
+        "id": "b07",
+        "kind": "CTA",
+        "start_word": "p23.w01",
+        "end_word": "p23.w02",
+        "obligations": [
+          "drive-action"
+        ],
+        "anchors": [
+          {
+            "id": "a-b07-attribution",
+            "role": "payoff",
+            "word": "p23.w01"
+          }
+        ],
+        "promotions": []
+      }
+    ],
+    "shots": [
+      {
+        "id": "s01",
+        "beat": "b01",
+        "start_word": "p01.w01",
+        "evidence_mode": "supporting",
+        "surface": "base",
+        "intent": "statement",
+        "content": {
+          "kicker": "التجارة الإلكترونية، ببساطة",
+          "headline": "تفتح متجر أونلاين؟",
+          "body": [
+            "سهل. بصح تبني متجر ",
+            {
+              "text": "يبيع",
+              "accent": true
+            },
+            "؟"
+          ],
+          "footnote": "ويرجّعلك الـclient"
+        },
+        "cues": [
+          {
+            "anchor": "a-b01-turn",
+            "kind": "reveal",
+            "target": {
+              "slot": "body"
+            }
+          }
+        ]
+      },
+      {
+        "id": "s02",
+        "beat": "b02",
+        "start_word": "p03.w01",
+        "evidence_mode": "supporting",
+        "surface": "alt",
+        "intent": "statement",
+        "content": {
+          "headline": "هنا الفرق."
+        }
+      },
+      {
+        "id": "s03",
+        "beat": "b03",
+        "start_word": "p04.w01",
+        "evidence_mode": "supporting",
+        "surface": "alt",
+        "intent": "brand",
+        "content": {
+          "visual": "bag_3d",
+          "headline": "WooCommerce عربي من الأصل"
+        },
+        "cues": [
+          {
+            "anchor": "a-b03-mark",
+            "kind": "reveal",
+            "target": {
+              "slot": "mark"
+            }
+          }
+        ]
+      },
+      {
+        "id": "s04",
+        "beat": "b03",
+        "start_word": "p05.w06",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "sales-journey",
+        "intent": "list",
+        "content": {
+          "headline": [
+            "مصمم لرحلة البيع ",
+            {
+              "text": "كاملة",
+              "accent": true
+            }
+          ],
+          "items": [
+            {
+              "label": "أول زيارة"
+            },
+            {
+              "label": "قرار الشراء"
+            },
+            {
+              "label": "طلب مكتمل"
+            },
+            {
+              "label": "عميل يرجع",
+              "accent": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "s05",
+        "beat": "b04",
+        "start_word": "p06.w01",
+        "evidence_mode": "visual-state",
+        "surface": "alt",
+        "capability_id": "quick-order",
+        "intent": "product-shot",
+        "asset": "buybox_still",
+        "content": {
+          "headline": [
+            "الـclient يحب يشري ",
+            {
+              "text": "بسرعة",
+              "accent": true
+            }
+          ],
+          "callout": "مباشرة من صفحة المنتج"
+        },
+        "camera": {
+          "mode": "focus"
+        }
+      },
+      {
+        "id": "s06",
+        "beat": "b04",
+        "start_word": "p08.w01",
+        "evidence_mode": "recorded-interaction",
+        "surface": "alt",
+        "capability_id": "quick-order",
+        "intent": "product-shot",
+        "asset": "quick_order_rec",
+        "content": {
+          "headline": "طلب سريع. بدون تعقيد."
+        },
+        "cues": [
+          {
+            "anchor": "a-b04-shipping",
+            "kind": "state_change",
+            "target": {
+              "element": "delivery_price"
+            }
+          }
+        ]
+      },
+      {
+        "id": "s07",
+        "beat": "b04",
+        "start_word": "p10.w01",
+        "evidence_mode": "recorded-interaction",
+        "surface": "base",
+        "capability_id": "quick-order",
+        "intent": "product-shot",
+        "asset": "variants_rec",
+        "content": {
+          "headline": "اللون والمقاس؟",
+          "callout": "وخلاص."
+        },
+        "cues": [
+          {
+            "anchor": "a-b04-confirm",
+            "kind": "state_change",
+            "target": {
+              "element": "confirm_button"
+            }
+          },
+          {
+            "anchor": "a-b04-payoff",
+            "kind": "reveal",
+            "target": {
+              "slot": "callout"
+            }
+          }
+        ]
+      },
+      {
+        "id": "s08",
+        "beat": "b05",
+        "start_word": "p12.w01",
+        "evidence_mode": "supporting",
+        "surface": "alt",
+        "intent": "statement",
+        "content": {
+          "headline": [
+            "بصح البيع ",
+            {
+              "text": "ما يوقفش هنا.",
+              "accent": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "s09",
+        "beat": "b05",
+        "start_word": "p13.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "feature",
+        "content": {
+          "kicker": "منظومة تحفظ العميل",
+          "headline": "نقاط الولاء",
+          "body": "كل طلب يبني سببًا للعودة.",
+          "icon": "icon_loyalty"
+        }
+      },
+      {
+        "id": "s10",
+        "beat": "b05",
+        "start_word": "p14.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "feature",
+        "content": {
+          "kicker": "منظومة تحفظ العميل",
+          "headline": "عجلة الحظ",
+          "body": "تفاعل يتحول إلى فرصة بيع.",
+          "icon": "icon_wheel"
+        }
+      },
+      {
+        "id": "s11",
+        "beat": "b05",
+        "start_word": "p15.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "feature",
+        "content": {
+          "kicker": "منظومة تحفظ العميل",
+          "headline": "الكوبونات",
+          "body": "العرض الصحيح، في اللحظة الصحيحة.",
+          "icon": "icon_coupons"
+        }
+      },
+      {
+        "id": "s12",
+        "beat": "b05",
+        "start_word": "p16.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "feature",
+        "content": {
+          "kicker": "منظومة تحفظ العميل",
+          "headline": "واتساب",
+          "body": "المحادثة قريبة من قرار الشراء.",
+          "icon": "icon_whatsapp"
+        }
+      },
+      {
+        "id": "s13",
+        "beat": "b05",
+        "start_word": "p17.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "feature",
+        "content": {
+          "kicker": "منظومة تحفظ العميل",
+          "headline": "المفضلة",
+          "body": "المنتجات التي يحبها تبقى قريبة.",
+          "icon": "icon_wishlist"
+        }
+      },
+      {
+        "id": "s14",
+        "beat": "b05",
+        "start_word": "p18.w01",
+        "evidence_mode": "stated",
+        "surface": "alt",
+        "capability_id": "retention-modules",
+        "intent": "stat",
+        "content": {
+          "value": "19",
+          "headline": "وحدة بيع وتسويق",
+          "body": "تشعل غير اللي يحتاجهم متجرك"
+        },
+        "cues": [
+          {
+            "anchor": "a-b05-payoff",
+            "kind": "reveal",
+            "target": {
+              "slot": "value"
+            }
+          }
+        ]
+      },
+      {
+        "id": "s15",
+        "beat": "b06",
+        "start_word": "p20.w01",
+        "evidence_mode": "supporting",
+        "surface": "alt",
+        "intent": "brand",
+        "content": {
+          "headline": [
+            "متجر يبيع اليوم… ",
+            {
+              "text": "وعلامة تكبر مع الوقت.",
+              "accent": true
+            }
+          ]
+        }
+      },
+      {
+        "id": "s16",
+        "beat": "b07",
+        "start_word": "p23.w01",
+        "evidence_mode": "supporting",
+        "surface": "alt",
+        "intent": "brand",
+        "content": {
+          "headline": [
+            "متجر يبيع اليوم… ",
+            {
+              "text": "وعلامة تكبر مع الوقت.",
+              "accent": true
+            }
+          ],
+          "cta": "tashkeel.dev"
+        },
+        "cues": [
+          {
+            "anchor": "a-b07-attribution",
+            "kind": "reveal",
+            "target": {
+              "slot": "cta"
+            }
+          }
+        ]
+      }
+    ],
+    "assets": {
+      "bag_3d": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/shopping-bag-3d.png"
+      },
+      "buybox_still": {
+        "kind": "screenshot",
+        "path": "brands/sooq-pro/assets/buybox.png"
+      },
+      "quick_order_rec": {
+        "kind": "recording",
+        "path": null,
+        "obtain": "Record the quick-order flow on a product page: fill name, phone, wilaya, city; delivery price appears. Manifest must expose `delivery_price`."
+      },
+      "variants_rec": {
+        "kind": "recording",
+        "path": null,
+        "obtain": "Record choosing colour and size, then confirming the order. Manifest must expose `confirm_button`."
+      },
+      "icon_loyalty": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/icons/loyalty.svg"
+      },
+      "icon_wheel": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/icons/wheel.svg"
+      },
+      "icon_coupons": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/icons/coupons.svg"
+      },
+      "icon_whatsapp": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/icons/whatsapp.svg"
+      },
+      "icon_wishlist": {
+        "kind": "static",
+        "path": "brands/sooq-pro/assets/icons/wishlist.svg"
+      }
+    }
+  },
+  "alignment": {
+    "words": [
+      {
+        "id": "p01.w01",
+        "text": "تفتح",
+        "start": 0.3,
+        "end": 0.6,
+        "confidence": 0.986
+      },
+      {
+        "id": "p01.w02",
+        "text": "متجر",
+        "start": 0.68,
+        "end": 0.94,
+        "confidence": 0.906
+      },
+      {
+        "id": "p01.w03",
+        "text": "أونلاين",
+        "start": 1.04,
+        "end": 1.48,
+        "confidence": 0.8888
+      },
+      {
+        "id": "p01.w04",
+        "text": "ساهل…",
+        "start": 1.78,
+        "end": 2.14,
+        "confidence": 0.9919
+      },
+      {
+        "id": "p02.w01",
+        "text": "بصح",
+        "start": 2.82,
+        "end": 3.06,
+        "confidence": 0.9595
+      },
+      {
+        "id": "p02.w02",
+        "text": "تبني",
+        "start": 3.18,
+        "end": 3.44,
+        "confidence": 0.9616
+      },
+      {
+        "id": "p02.w03",
+        "text": "متجر",
+        "start": 3.58,
+        "end": 3.94,
+        "confidence": 0.9725
+      },
+      {
+        "id": "p02.w04",
+        "text": "يبيع…",
+        "start": 4.02,
+        "end": 4.5,
+        "confidence": 0.9833
+      },
+      {
+        "id": "p02.w05",
+        "text": "ويرجّعلك",
+        "start": 5.1,
+        "end": 5.78,
+        "confidence": 0.9905
+      },
+      {
+        "id": "p02.w06",
+        "text": "الـclient؟",
+        "start": 5.86,
+        "end": 7.02,
+        "confidence": 0.5763
+      },
+      {
+        "id": "p03.w01",
+        "text": "هنا",
+        "start": 7.12,
+        "end": 7.3,
+        "confidence": 0.9807
+      },
+      {
+        "id": "p03.w02",
+        "text": "الفرق.",
+        "start": 7.4,
+        "end": 7.74,
+        "confidence": 0.9924
+      },
+      {
+        "id": "p04.w01",
+        "text": "هذا",
+        "start": 8.84,
+        "end": 9.12,
+        "confidence": 0.9939
+      },
+      {
+        "id": "p04.w02",
+        "text": "هو",
+        "start": 9.22,
+        "end": 9.34,
+        "confidence": 0.9327
+      },
+      {
+        "id": "p04.w03",
+        "text": "Sooq",
+        "start": 9.98,
+        "end": 10.24,
+        "confidence": 0.2148
+      },
+      {
+        "id": "p04.w04",
+        "text": "Pro.",
+        "start": 10.34,
+        "end": 10.52,
+        "confidence": 0.8259
+      },
+      {
+        "id": "p05.w01",
+        "text": "قالب",
+        "start": 11.48,
+        "end": 11.82,
+        "confidence": 0.9902
+      },
+      {
+        "id": "p05.w02",
+        "text": "WooCommerce",
+        "start": 11.88,
+        "end": 12.48,
+        "confidence": 0.1179
+      },
+      {
+        "id": "p05.w03",
+        "text": "عربي",
+        "start": 12.56,
+        "end": 12.88,
+        "confidence": 0.9703
+      },
+      {
+        "id": "p05.w04",
+        "text": "من",
+        "start": 13.24,
+        "end": 13.3,
+        "confidence": 0.9882
+      },
+      {
+        "id": "p05.w05",
+        "text": "الأصل،",
+        "start": 13.34,
+        "end": 13.66,
+        "confidence": 0.9922
+      },
+      {
+        "id": "p05.w06",
+        "text": "مصمّم",
+        "start": 14.38,
+        "end": 14.74,
+        "confidence": 0.9875
+      },
+      {
+        "id": "p05.w07",
+        "text": "لرحلة",
+        "start": 14.92,
+        "end": 15.22,
+        "confidence": 0.946
+      },
+      {
+        "id": "p05.w08",
+        "text": "البيع",
+        "start": 15.34,
+        "end": 15.66,
+        "confidence": 0.9741
+      },
+      {
+        "id": "p05.w09",
+        "text": "كاملة…",
+        "start": 15.92,
+        "end": 16.32,
+        "confidence": 0.9944
+      },
+      {
+        "id": "p05.w10",
+        "text": "من",
+        "start": 16.88,
+        "end": 16.98,
+        "confidence": 0.9969
+      },
+      {
+        "id": "p05.w11",
+        "text": "أول",
+        "start": 17.12,
+        "end": 17.34,
+        "confidence": 0.9788
+      },
+      {
+        "id": "p05.w12",
+        "text": "زيارة،",
+        "start": 17.4,
+        "end": 17.74,
+        "confidence": 0.9944
+      },
+      {
+        "id": "p05.w13",
+        "text": "حتى",
+        "start": 18.22,
+        "end": 18.6,
+        "confidence": 0.9831
+      },
+      {
+        "id": "p05.w14",
+        "text": "يرجعلك",
+        "start": 18.7,
+        "end": 19.18,
+        "confidence": 0.9952
+      },
+      {
+        "id": "p05.w15",
+        "text": "الـclient.",
+        "start": 19.26,
+        "end": 19.68,
+        "confidence": 0.1906
+      },
+      {
+        "id": "p06.w01",
+        "text": "يحب",
+        "start": 20.56,
+        "end": 20.8,
+        "confidence": 0.9575
+      },
+      {
+        "id": "p06.w02",
+        "text": "يشري",
+        "start": 20.84,
+        "end": 21.08,
+        "confidence": 0.965
+      },
+      {
+        "id": "p06.w03",
+        "text": "بسرعة؟",
+        "start": 21.14,
+        "end": 21.42,
+        "confidence": 0.993
+      },
+      {
+        "id": "p07.w01",
+        "text": "يكوماندي",
+        "start": 22.14,
+        "end": 22.6,
+        "confidence": 0.6518
+      },
+      {
+        "id": "p07.w02",
+        "text": "مباشرة",
+        "start": 22.66,
+        "end": 23.22,
+        "confidence": 0.9812
+      },
+      {
+        "id": "p07.w03",
+        "text": "من",
+        "start": 23.44,
+        "end": 23.52,
+        "confidence": 0.9869
+      },
+      {
+        "id": "p07.w04",
+        "text": "صفحة",
+        "start": 23.58,
+        "end": 23.78,
+        "confidence": 0.9948
+      },
+      {
+        "id": "p07.w05",
+        "text": "المنتج.",
+        "start": 23.9,
+        "end": 24.26,
+        "confidence": 0.9897
+      },
+      {
+        "id": "p08.w01",
+        "text": "الاسم…",
+        "start": 25.14,
+        "end": 25.48,
+        "confidence": 0.9899
+      },
+      {
+        "id": "p08.w02",
+        "text": "النيميرو…",
+        "start": 26.12,
+        "end": 26.56,
+        "confidence": 0.7056
+      },
+      {
+        "id": "p08.w03",
+        "text": "الولاية",
+        "start": 27.26,
+        "end": 27.68,
+        "confidence": 0.7843
+      },
+      {
+        "id": "p08.w04",
+        "text": "والمدينة…",
+        "start": 27.74,
+        "end": 28.28,
+        "confidence": 0.4173
+      },
+      {
+        "id": "p09.w01",
+        "text": "وسعر",
+        "start": 29.18,
+        "end": 29.52,
+        "confidence": 0.9742
+      },
+      {
+        "id": "p09.w02",
+        "text": "التوصيل",
+        "start": 29.58,
+        "end": 30.02,
+        "confidence": 0.9233
+      },
+      {
+        "id": "p09.w03",
+        "text": "يتحسبلو",
+        "start": 30.14,
+        "end": 30.8,
+        "confidence": 0.9784
+      },
+      {
+        "id": "p09.w04",
+        "text": "في",
+        "start": 30.96,
+        "end": 31.02,
+        "confidence": 0.9805
+      },
+      {
+        "id": "p09.w05",
+        "text": "الحين.",
+        "start": 31.06,
+        "end": 31.36,
+        "confidence": 0.981
+      },
+      {
+        "id": "p10.w01",
+        "text": "يختار",
+        "start": 32.32,
+        "end": 32.66,
+        "confidence": 0.9097
+      },
+      {
+        "id": "p10.w02",
+        "text": "اللون",
+        "start": 32.74,
+        "end": 32.96,
+        "confidence": 0.6072
+      },
+      {
+        "id": "p10.w03",
+        "text": "والمقاس،",
+        "start": 33,
+        "end": 33.52,
+        "confidence": 0.9725
+      },
+      {
+        "id": "p10.w04",
+        "text": "يكونفيرمي…",
+        "start": 34.16,
+        "end": 34.72,
+        "confidence": 0.9203
+      },
+      {
+        "id": "p11.w01",
+        "text": "وخلاص.",
+        "start": 35.56,
+        "end": 35.92,
+        "confidence": 0.8111
+      },
+      {
+        "id": "p12.w01",
+        "text": "بصح",
+        "start": 37.08,
+        "end": 37.34,
+        "confidence": 0.986
+      },
+      {
+        "id": "p12.w02",
+        "text": "البيع",
+        "start": 37.42,
+        "end": 37.74,
+        "confidence": 0.9849
+      },
+      {
+        "id": "p12.w03",
+        "text": "ما",
+        "start": 38.14,
+        "end": 38.18,
+        "confidence": 0.9834
+      },
+      {
+        "id": "p12.w04",
+        "text": "يوقفش",
+        "start": 38.26,
+        "end": 38.66,
+        "confidence": 0.9773
+      },
+      {
+        "id": "p12.w05",
+        "text": "هنا.",
+        "start": 38.72,
+        "end": 38.86,
+        "confidence": 0.5683
+      },
+      {
+        "id": "p13.w01",
+        "text": "نقاط",
+        "start": 39.9,
+        "end": 40.18,
+        "confidence": 0.9225
+      },
+      {
+        "id": "p13.w02",
+        "text": "الوفاء…",
+        "start": 40.26,
+        "end": 40.74,
+        "confidence": 0.9414
+      },
+      {
+        "id": "p14.w01",
+        "text": "عجلة",
+        "start": 41.48,
+        "end": 41.78,
+        "confidence": 0.9854
+      },
+      {
+        "id": "p14.w02",
+        "text": "الحظ…",
+        "start": 41.92,
+        "end": 42.24,
+        "confidence": 0.9843
+      },
+      {
+        "id": "p15.w01",
+        "text": "الكوبونات…",
+        "start": 43.12,
+        "end": 43.88,
+        "confidence": 0.9394
+      },
+      {
+        "id": "p16.w01",
+        "text": "واتساب…",
+        "start": 44.6,
+        "end": 45.18,
+        "confidence": 0.8982
+      },
+      {
+        "id": "p17.w01",
+        "text": "المفضّلة…",
+        "start": 45.88,
+        "end": 46.54,
+        "confidence": 0.9926
+      },
+      {
+        "id": "p18.w01",
+        "text": "تسعطاش",
+        "start": 47.42,
+        "end": 48.32,
+        "confidence": 0.9674
+      },
+      {
+        "id": "p18.w02",
+        "text": "وحدة…",
+        "start": 48.4,
+        "end": 48.64,
+        "confidence": 0.9803
+      },
+      {
+        "id": "p19.w01",
+        "text": "تشعل",
+        "start": 49.4,
+        "end": 49.78,
+        "confidence": 0.8713
+      },
+      {
+        "id": "p19.w02",
+        "text": "غير",
+        "start": 49.86,
+        "end": 50,
+        "confidence": 0.4453
+      },
+      {
+        "id": "p19.w03",
+        "text": "اللي",
+        "start": 50.06,
+        "end": 50.14,
+        "confidence": 0.0295
+      },
+      {
+        "id": "p19.w04",
+        "text": "يحتاجهم",
+        "start": 50.2,
+        "end": 50.64,
+        "confidence": 0.9675
+      },
+      {
+        "id": "p19.w05",
+        "text": "المتجر",
+        "start": 50.7,
+        "end": 51.02,
+        "confidence": 0.8168
+      },
+      {
+        "id": "p19.w06",
+        "text": "تاعك.",
+        "start": 51.08,
+        "end": 51.36,
+        "confidence": 0.7808
+      },
+      {
+        "id": "p20.w01",
+        "text": "Sooq",
+        "start": 52.7,
+        "end": 52.92,
+        "confidence": 0.1632
+      },
+      {
+        "id": "p20.w02",
+        "text": "Pro.",
+        "start": 53.04,
+        "end": 53.18,
+        "confidence": 0.6837
+      },
+      {
+        "id": "p21.w01",
+        "text": "متجر",
+        "start": 54.3,
+        "end": 54.64,
+        "confidence": 0.9752
+      },
+      {
+        "id": "p21.w02",
+        "text": "يبيع",
+        "start": 54.72,
+        "end": 54.98,
+        "confidence": 0.989
+      },
+      {
+        "id": "p21.w03",
+        "text": "اليوم…",
+        "start": 55.06,
+        "end": 55.38,
+        "confidence": 0.9772
+      },
+      {
+        "id": "p22.w01",
+        "text": "وعلامة",
+        "start": 56.2,
+        "end": 56.8,
+        "confidence": 0.926
+      },
+      {
+        "id": "p22.w02",
+        "text": "تكبر",
+        "start": 57,
+        "end": 57.38,
+        "confidence": 0.9951
+      },
+      {
+        "id": "p22.w03",
+        "text": "مع",
+        "start": 57.48,
+        "end": 57.58,
+        "confidence": 0.9971
+      },
+      {
+        "id": "p22.w04",
+        "text": "الوقت.",
+        "start": 57.66,
+        "end": 57.96,
+        "confidence": 0.9957
+      },
+      {
+        "id": "p23.w01",
+        "text": "من",
+        "start": 59.08,
+        "end": 59.18,
+        "confidence": 0.9924
+      },
+      {
+        "id": "p23.w02",
+        "text": "تشكيل.",
+        "start": 59.28,
+        "end": 60.18,
+        "confidence": 0.9865
+      }
+    ],
+    "duration": 60.2
+  },
+  "archetype": "launch",
+  "output": {
+    "tailS": 1,
+    "fps": 30,
+    "width": 1080,
+    "height": 1920
+  }
+}

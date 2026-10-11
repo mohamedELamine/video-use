@@ -19,7 +19,7 @@ const mockCompiledPlan: CompiledPlan = {
   grounding: [],
   timeline: [
     {
-      shot: { id: 'shot-1', beatId: 'beat-1', intent: 'statement' },
+      shot: { id: 'shot-1', beatId: 'beat-1', intent: 'statement', startWordId: 'w1', slots: { headline: 'Test' } },
       startFrame: 0,
       startSecond: 0,
       endFrame: 30,
@@ -28,7 +28,7 @@ const mockCompiledPlan: CompiledPlan = {
       cues: [],
     },
     {
-      shot: { id: 'shot-2', beatId: 'beat-1', intent: 'statement' },
+      shot: { id: 'shot-2', beatId: 'beat-1', intent: 'statement', startWordId: 'w2', slots: { headline: 'Test 2' } },
       startFrame: 30,
       startSecond: 1.0,
       endFrame: 60,
