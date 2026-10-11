@@ -1,20 +1,7 @@
 {
   "valid": true,
   "errors": [],
-  "warnings": [
-    {
-      "code": "ANCHOR_LOW_CONFIDENCE",
-      "severity": "warning",
-      "entityId": "a-b03-mark",
-      "message": "Anchor word confidence too low: 0.2148"
-    },
-    {
-      "code": "ANCHOR_LOW_CONFIDENCE",
-      "severity": "warning",
-      "entityId": "a-b06-mark",
-      "message": "Anchor word confidence too low: 0.1632"
-    }
-  ],
+  "warnings": [],
   "grounding": [],
   "timeline": [
     {
@@ -249,8 +236,8 @@
       },
       "startFrame": 1423,
       "startSecond": 47.42,
-      "endFrame": 1566,
-      "endSecond": 52.2,
+      "endFrame": 1589,
+      "endSecond": 52.980000000000004,
       "anchors": [
         {
           "id": "a-b05-payoff",
@@ -271,18 +258,18 @@
         "beatId": "b06",
         "intent": "brand"
       },
-      "startFrame": 1581,
-      "startSecond": 52.7,
+      "startFrame": 1591,
+      "startSecond": 53.04,
       "endFrame": 1757,
       "endSecond": 58.58,
       "anchors": [
         {
           "id": "a-b06-mark",
           "role": "payoff",
-          "wordId": "p20.w01",
-          "word": "Sooq",
-          "second": 52.7,
-          "frame": 1581,
+          "wordId": "p20.w02",
+          "word": "Pro.",
+          "second": 53.04,
+          "frame": 1591,
           "landed": true,
           "landingType": "cut"
         }
@@ -314,5 +301,5 @@
       "cues": []
     }
   ],
-  "storyboard": "# Storyboard\n\n## Beat: b01 (HOOK) [words 0-9]\n\n**Narration**: \"تفتح متجر أونلاين ساهل… بصح تبني متجر يبيع… ويرجّعلك الـclient؟\"\n\n**Anchors**:\n- emphasis: \"بصح\" (p02.w01)\n\n### Shot: s01\n- **Intent**: statement\n- **Start**: 0.30s (frame 9)\n- **End**: 7.07s (frame 212)\n- **Duration**: 6.77s\n- **Surface**: base\n- **Cues**:\n  - reveal: {\"slot\":\"body\"} (anchor: a-b01-turn)\n\n\n## Beat: b02 (PIVOT) [words 10-11]\n\n**Narration**: \"هنا الفرق.\"\n\n### Shot: s02\n- **Intent**: statement\n- **Start**: 7.12s (frame 214)\n- **End**: 8.34s (frame 250)\n- **Duration**: 1.22s\n- **Surface**: alt\n\n\n## Beat: b03 (REVEAL) [words 12-30]\n\n**Narration**: \"هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.\"\n\n**Anchors**:\n- payoff: \"Sooq\" (p04.w03)\n\n### Shot: s03\n- **Intent**: brand\n- **Start**: 8.84s (frame 265)\n- **End**: 14.02s (frame 421)\n- **Duration**: 5.18s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"mark\"} (anchor: a-b03-mark)\n\n### Shot: s04\n- **Intent**: list\n- **Start**: 14.38s (frame 431)\n- **End**: 20.12s (frame 604)\n- **Duration**: 5.74s\n- **Surface**: alt\n\n\n## Beat: b04 (CAPABILITY) [words 31-52]\n\n**Narration**: \"يحب يشري بسرعة؟ يكوماندي مباشرة من صفحة المنتج. الاسم… النيميرو… الولاية والمدينة… وسعر التوصيل يتحسبلو في الحين. يختار اللون والمقاس، يكونفيرمي… وخلاص.\"\n\n**Anchors**:\n- emphasis: \"وسعر\" (p09.w01)\n- emphasis: \"يكونفيرمي…\" (p10.w04)\n- payoff: \"وخلاص.\" (p11.w01)\n\n### Shot: s05\n- **Intent**: product-shot\n- **Start**: 20.56s (frame 617)\n- **End**: 24.70s (frame 741)\n- **Duration**: 4.14s\n- **Surface**: alt\n\n### Shot: s06\n- **Intent**: product-shot\n- **Start**: 25.14s (frame 754)\n- **End**: 31.84s (frame 955)\n- **Duration**: 6.70s\n- **Surface**: alt\n- **Cues**:\n  - state-change: {\"element\":\"delivery_price\"} (anchor: a-b04-shipping)\n\n### Shot: s07\n- **Intent**: product-shot\n- **Start**: 32.32s (frame 970)\n- **End**: 36.58s (frame 1097)\n- **Duration**: 4.26s\n- **Surface**: base\n- **Cues**:\n  - state-change: {\"element\":\"confirm_button\"} (anchor: a-b04-confirm)\n  - reveal: {\"slot\":\"callout\"} (anchor: a-b04-payoff)\n\n\n## Beat: b05 (CAPABILITY) [words 53-72]\n\n**Narration**: \"بصح البيع ما يوقفش هنا. نقاط الوفاء… عجلة الحظ… الكوبونات… واتساب… المفضّلة… تسعطاش وحدة… تشعل غير اللي يحتاجهم المتجر تاعك.\"\n\n**Anchors**:\n- emphasis: \"نقاط\" (p13.w01)\n- emphasis: \"عجلة\" (p14.w01)\n- emphasis: \"الكوبونات…\" (p15.w01)\n- emphasis: \"واتساب…\" (p16.w01)\n- emphasis: \"المفضّلة…\" (p17.w01)\n- payoff: \"تسعطاش\" (p18.w01)\n\n### Shot: s08\n- **Intent**: statement\n- **Start**: 37.08s (frame 1112)\n- **End**: 39.40s (frame 1182)\n- **Duration**: 2.32s\n- **Surface**: alt\n\n### Shot: s09\n- **Intent**: feature\n- **Start**: 39.90s (frame 1197)\n- **End**: 41.11s (frame 1233)\n- **Duration**: 1.21s\n- **Surface**: alt\n\n### Shot: s10\n- **Intent**: feature\n- **Start**: 41.48s (frame 1244)\n- **End**: 42.68s (frame 1280)\n- **Duration**: 1.20s\n- **Surface**: alt\n\n### Shot: s11\n- **Intent**: feature\n- **Start**: 43.12s (frame 1294)\n- **End**: 44.24s (frame 1327)\n- **Duration**: 1.12s\n- **Surface**: alt\n\n### Shot: s12\n- **Intent**: feature\n- **Start**: 44.60s (frame 1338)\n- **End**: 45.53s (frame 1366)\n- **Duration**: 0.93s\n- **Surface**: alt\n\n### Shot: s13\n- **Intent**: feature\n- **Start**: 45.88s (frame 1376)\n- **End**: 46.98s (frame 1409)\n- **Duration**: 1.10s\n- **Surface**: alt\n\n### Shot: s14\n- **Intent**: stat\n- **Start**: 47.42s (frame 1423)\n- **End**: 52.20s (frame 1566)\n- **Duration**: 4.78s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"value\"} (anchor: a-b05-payoff)\n\n\n## Beat: b06 (PAYOFF) [words 73-81]\n\n**Narration**: \"Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت.\"\n\n**Anchors**:\n- payoff: \"Sooq\" (p20.w01)\n\n### Shot: s15\n- **Intent**: brand\n- **Start**: 52.70s (frame 1581)\n- **End**: 58.58s (frame 1757)\n- **Duration**: 5.88s\n- **Surface**: alt\n\n\n## Beat: b07 (CTA) [words 82-83]\n\n**Narration**: \"من تشكيل.\"\n\n**Anchors**:\n- payoff: \"من\" (p23.w01)\n\n### Shot: s16\n- **Intent**: brand\n- **Start**: 59.08s (frame 1772)\n- **End**: 60.20s (frame 1806)\n- **Duration**: 1.12s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"cta\"} (anchor: a-b07-attribution)\n\n"
+  "storyboard": "# Storyboard\n\n## Beat: b01 (HOOK) [words 0-9]\n\n**Narration**: \"تفتح متجر أونلاين ساهل… بصح تبني متجر يبيع… ويرجّعلك الـclient؟\"\n\n**Anchors**:\n- emphasis: \"بصح\" (p02.w01)\n\n### Shot: s01\n- **Intent**: statement\n- **Start**: 0.30s (frame 9)\n- **End**: 7.07s (frame 212)\n- **Duration**: 6.77s\n- **Surface**: base\n- **Cues**:\n  - reveal: {\"slot\":\"body\"} (anchor: a-b01-turn)\n\n\n## Beat: b02 (PIVOT) [words 10-11]\n\n**Narration**: \"هنا الفرق.\"\n\n### Shot: s02\n- **Intent**: statement\n- **Start**: 7.12s (frame 214)\n- **End**: 8.34s (frame 250)\n- **Duration**: 1.22s\n- **Surface**: alt\n\n\n## Beat: b03 (REVEAL) [words 12-30]\n\n**Narration**: \"هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient.\"\n\n**Anchors**:\n- payoff: \"Pro.\" (p04.w04)\n\n### Shot: s03\n- **Intent**: brand\n- **Start**: 8.84s (frame 265)\n- **End**: 14.02s (frame 421)\n- **Duration**: 5.18s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"mark\"} (anchor: a-b03-mark)\n\n### Shot: s04\n- **Intent**: list\n- **Start**: 14.38s (frame 431)\n- **End**: 20.12s (frame 604)\n- **Duration**: 5.74s\n- **Surface**: alt\n\n\n## Beat: b04 (CAPABILITY) [words 31-52]\n\n**Narration**: \"يحب يشري بسرعة؟ يكوماندي مباشرة من صفحة المنتج. الاسم… النيميرو… الولاية والمدينة… وسعر التوصيل يتحسبلو في الحين. يختار اللون والمقاس، يكونفيرمي… وخلاص.\"\n\n**Anchors**:\n- emphasis: \"وسعر\" (p09.w01)\n- emphasis: \"يكونفيرمي…\" (p10.w04)\n- payoff: \"وخلاص.\" (p11.w01)\n\n### Shot: s05\n- **Intent**: product-shot\n- **Start**: 20.56s (frame 617)\n- **End**: 24.70s (frame 741)\n- **Duration**: 4.14s\n- **Surface**: alt\n\n### Shot: s06\n- **Intent**: product-shot\n- **Start**: 25.14s (frame 754)\n- **End**: 31.84s (frame 955)\n- **Duration**: 6.70s\n- **Surface**: alt\n- **Cues**:\n  - state-change: {\"element\":\"delivery_price\"} (anchor: a-b04-shipping)\n\n### Shot: s07\n- **Intent**: product-shot\n- **Start**: 32.32s (frame 970)\n- **End**: 36.58s (frame 1097)\n- **Duration**: 4.26s\n- **Surface**: base\n- **Cues**:\n  - state-change: {\"element\":\"confirm_button\"} (anchor: a-b04-confirm)\n  - reveal: {\"slot\":\"callout\"} (anchor: a-b04-payoff)\n\n\n## Beat: b05 (CAPABILITY) [words 53-72]\n\n**Narration**: \"بصح البيع ما يوقفش هنا. نقاط الوفاء… عجلة الحظ… الكوبونات… واتساب… المفضّلة… تسعطاش وحدة… تشعل غير اللي يحتاجهم المتجر تاعك.\"\n\n**Anchors**:\n- emphasis: \"نقاط\" (p13.w01)\n- emphasis: \"عجلة\" (p14.w01)\n- emphasis: \"الكوبونات…\" (p15.w01)\n- emphasis: \"واتساب…\" (p16.w01)\n- emphasis: \"المفضّلة…\" (p17.w01)\n- payoff: \"تسعطاش\" (p18.w01)\n\n### Shot: s08\n- **Intent**: statement\n- **Start**: 37.08s (frame 1112)\n- **End**: 39.40s (frame 1182)\n- **Duration**: 2.32s\n- **Surface**: alt\n\n### Shot: s09\n- **Intent**: feature\n- **Start**: 39.90s (frame 1197)\n- **End**: 41.11s (frame 1233)\n- **Duration**: 1.21s\n- **Surface**: alt\n\n### Shot: s10\n- **Intent**: feature\n- **Start**: 41.48s (frame 1244)\n- **End**: 42.68s (frame 1280)\n- **Duration**: 1.20s\n- **Surface**: alt\n\n### Shot: s11\n- **Intent**: feature\n- **Start**: 43.12s (frame 1294)\n- **End**: 44.24s (frame 1327)\n- **Duration**: 1.12s\n- **Surface**: alt\n\n### Shot: s12\n- **Intent**: feature\n- **Start**: 44.60s (frame 1338)\n- **End**: 45.53s (frame 1366)\n- **Duration**: 0.93s\n- **Surface**: alt\n\n### Shot: s13\n- **Intent**: feature\n- **Start**: 45.88s (frame 1376)\n- **End**: 46.98s (frame 1409)\n- **Duration**: 1.10s\n- **Surface**: alt\n\n### Shot: s14\n- **Intent**: stat\n- **Start**: 47.42s (frame 1423)\n- **End**: 52.98s (frame 1589)\n- **Duration**: 5.56s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"value\"} (anchor: a-b05-payoff)\n\n\n## Beat: b06 (PAYOFF) [words 73-81]\n\n**Narration**: \"Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت.\"\n\n**Anchors**:\n- payoff: \"Pro.\" (p20.w02)\n\n### Shot: s15\n- **Intent**: brand\n- **Start**: 53.04s (frame 1591)\n- **End**: 58.58s (frame 1757)\n- **Duration**: 5.54s\n- **Surface**: alt\n\n\n## Beat: b07 (CTA) [words 82-83]\n\n**Narration**: \"من تشكيل.\"\n\n**Anchors**:\n- payoff: \"من\" (p23.w01)\n\n### Shot: s16\n- **Intent**: brand\n- **Start**: 59.08s (frame 1772)\n- **End**: 60.20s (frame 1806)\n- **Duration**: 1.12s\n- **Surface**: alt\n- **Cues**:\n  - reveal: {\"slot\":\"cta\"} (anchor: a-b07-attribution)\n\n"
 }

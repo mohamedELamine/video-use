@@ -34,7 +34,7 @@
 **Narration**: "هذا هو Sooq Pro. قالب WooCommerce عربي من الأصل، مصمّم لرحلة البيع كاملة… من أول زيارة، حتى يرجعلك الـclient."
 
 **Anchors**:
-- payoff: "Sooq" (p04.w03)
+- payoff: "Pro." (p04.w04)
 
 ### Shot: s03
 - **Intent**: brand
@@ -146,8 +146,8 @@
 ### Shot: s14
 - **Intent**: stat
 - **Start**: 47.42s (frame 1423)
-- **End**: 52.20s (frame 1566)
-- **Duration**: 4.78s
+- **End**: 52.98s (frame 1589)
+- **Duration**: 5.56s
 - **Surface**: alt
 - **Cues**:
   - reveal: {"slot":"value"} (anchor: a-b05-payoff)
@@ -158,13 +158,13 @@
 **Narration**: "Sooq Pro. متجر يبيع اليوم… وعلامة تكبر مع الوقت."
 
 **Anchors**:
-- payoff: "Sooq" (p20.w01)
+- payoff: "Pro." (p20.w02)
 
 ### Shot: s15
 - **Intent**: brand
-- **Start**: 52.70s (frame 1581)
+- **Start**: 53.04s (frame 1591)
 - **End**: 58.58s (frame 1757)
-- **Duration**: 5.88s
+- **Duration**: 5.54s
 - **Surface**: alt
 
 

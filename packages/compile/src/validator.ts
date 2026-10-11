@@ -240,7 +240,7 @@ export class Validator {
           // Check confidence
           const word = this.alignment.words.find(w => w.id === anchor.wordId);
           if (word?.confidence !== undefined && word.confidence < 0.5) {
-            this.addWarning('ANCHOR_LOW_CONFIDENCE', anchor.id, `Anchor word confidence too low: ${word.confidence}`);
+            this.addError('ANCHOR_LOW_CONFIDENCE', anchor.id, `Anchor word confidence too low: ${word.confidence}`);
           }
         }
 
@@ -404,12 +404,12 @@ export class Validator {
     });
   }
 
-  private addWarning(code: string, entityId: string, message: string): void {
-    this.findings.push({
-      code,
-      severity: 'warning',
-      entityId,
-      message,
-    });
-  }
+  // private addWarning(code: string, entityId: string, message: string): void {
+  //   this.findings.push({
+  //     code,
+  //     severity: 'warning',
+  //     entityId,
+  //     message,
+  //   });
+  // }
 }

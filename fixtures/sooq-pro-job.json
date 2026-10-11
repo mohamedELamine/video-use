@@ -31,7 +31,7 @@
         "end_word": "p05.w15",
         "obligations": ["establish-product"],
         "anchors": [
-          { "id": "a-b03-mark", "role": "payoff", "word": "p04.w03" }
+          { "id": "a-b03-mark", "role": "payoff", "word": "p04.w04" }
         ],
         "promotions": [
           {
@@ -86,7 +86,7 @@
         "end_word": "p22.w04",
         "obligations": ["resolve-promise"],
         "anchors": [
-          { "id": "a-b06-mark", "role": "payoff", "word": "p20.w01" }
+          { "id": "a-b06-mark", "role": "payoff", "word": "p20.w02" }
         ],
         "promotions": []
       },
@@ -319,7 +319,7 @@
       {
         "id": "s15",
         "beat": "b06",
-        "start_word": "p20.w01",
+        "start_word": "p20.w02",
         "evidence_mode": "supporting",
         "surface": "alt",
         "intent": "brand",

@@ -182,7 +182,7 @@
           {
             "id": "a-b03-mark",
             "role": "payoff",
-            "wordId": "p04.w03"
+            "wordId": "p04.w04"
           }
         ],
         "shots": [
@@ -533,14 +533,14 @@
           {
             "id": "a-b06-mark",
             "role": "payoff",
-            "wordId": "p20.w01"
+            "wordId": "p20.w02"
           }
         ],
         "shots": [
           {
             "id": "s15",
             "beatId": "b06",
-            "startWordId": "p20.w01",
+            "startWordId": "p20.w02",
             "intent": "brand",
             "surface": "alt",
             "evidenceMode": "supporting",
